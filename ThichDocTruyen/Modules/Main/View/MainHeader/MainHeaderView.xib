@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MainHeaderView" customModule="ThichDocTruyen" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_newest" translatesAutoresizingMaskIntoConstraints="NO" id="a2y-A4-HbC">
+                    <rect key="frame" x="8" y="8" width="28" height="28"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="a2y-A4-HbC" secondAttribute="height" multiplier="1:1" id="4Cv-vC-Gcf"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cập nhật mới nhất" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2iT-Xv-iYf">
+                    <rect key="frame" x="44" y="12" width="140.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.30196078431372547" green="0.73725490196078436" blue="0.36078431372549019" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zMB-Eh-twB">
+                    <rect key="frame" x="287" y="12" width="80" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="mn5-4N-7rG"/>
+                        <constraint firstAttribute="height" constant="20" id="upX-am-M2a"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="Xem thêm&gt;&gt;">
+                        <color key="titleColor" red="0.48627450980392156" green="0.61568627450980395" blue="0.65098039215686276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="zMB-Eh-twB" secondAttribute="trailing" constant="8" id="0v9-a1-Aha"/>
+                <constraint firstAttribute="bottom" secondItem="a2y-A4-HbC" secondAttribute="bottom" constant="8" id="2RP-Yl-Ude"/>
+                <constraint firstItem="zMB-Eh-twB" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Q5c-4G-All"/>
+                <constraint firstItem="2iT-Xv-iYf" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="fgI-qo-NyO"/>
+                <constraint firstItem="a2y-A4-HbC" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="qd8-99-5ua"/>
+                <constraint firstItem="a2y-A4-HbC" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="uBB-Ni-fQG"/>
+                <constraint firstItem="2iT-Xv-iYf" firstAttribute="leading" secondItem="a2y-A4-HbC" secondAttribute="trailing" constant="8" id="y2b-1h-kBK"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="btnMore" destination="zMB-Eh-twB" id="3Gc-J7-vCF"/>
+                <outlet property="lblTItle" destination="2iT-Xv-iYf" id="vn6-90-Ubc"/>
+                <outlet property="widthOfBtnMore" destination="mn5-4N-7rG" id="j5P-EO-gVl"/>
+            </connections>
+            <point key="canvasLocation" x="32.5" y="313"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_newest" width="42" height="42"/>
+    </resources>
+</document>

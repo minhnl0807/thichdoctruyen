@@ -1,0 +1,6 @@
+module Pods_ThichDocTruyen {
+  umbrella header "Pods-ThichDocTruyen-umbrella.h"
+
+  export *
+  module * { export * }
+}

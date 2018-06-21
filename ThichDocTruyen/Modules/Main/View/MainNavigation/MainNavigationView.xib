@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MainNavigationView" customModule="ThichDocTruyen" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ICj-uo-WiR">
+                    <rect key="frame" x="62" y="7" width="250" height="30"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_search" translatesAutoresizingMaskIntoConstraints="NO" id="IqL-KQ-Faq">
+                            <rect key="frame" x="51" y="8" width="15" height="15"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="IqL-KQ-Faq" secondAttribute="height" multiplier="1:1" id="7Wi-yD-9VM"/>
+                                <constraint firstAttribute="width" constant="15" id="wX6-LY-TGp"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nhập từ khoá" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n6T-0e-EZy">
+                            <rect key="frame" x="82" y="6.5" width="87.5" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.6705882352941176" green="0.6705882352941176" blue="0.6705882352941176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.91764705882352937" green="0.91764705882352937" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="n6T-0e-EZy" firstAttribute="leading" secondItem="IqL-KQ-Faq" secondAttribute="trailing" constant="16" id="KeL-6g-MFg"/>
+                        <constraint firstItem="n6T-0e-EZy" firstAttribute="centerX" secondItem="ICj-uo-WiR" secondAttribute="centerX" id="QDx-Qp-l5M"/>
+                        <constraint firstItem="n6T-0e-EZy" firstAttribute="centerY" secondItem="ICj-uo-WiR" secondAttribute="centerY" id="R4H-CR-A1l"/>
+                        <constraint firstAttribute="height" constant="30" id="eja-av-47y"/>
+                        <constraint firstItem="IqL-KQ-Faq" firstAttribute="centerY" secondItem="ICj-uo-WiR" secondAttribute="centerY" id="maY-dR-2pB"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hs8-vx-P3a">
+                    <rect key="frame" x="62" y="7" width="250" height="30"/>
+                    <connections>
+                        <action selector="searchClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="TaC-Cl-fHH"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Hs8-vx-P3a" firstAttribute="leading" secondItem="ICj-uo-WiR" secondAttribute="leading" id="74p-3V-VUZ"/>
+                <constraint firstItem="ICj-uo-WiR" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="1/1.5" id="90w-c4-ak6"/>
+                <constraint firstItem="Hs8-vx-P3a" firstAttribute="bottom" secondItem="ICj-uo-WiR" secondAttribute="bottom" id="C80-Pc-c7e"/>
+                <constraint firstItem="Hs8-vx-P3a" firstAttribute="top" secondItem="ICj-uo-WiR" secondAttribute="top" id="EeI-fn-Sid"/>
+                <constraint firstItem="Hs8-vx-P3a" firstAttribute="trailing" secondItem="ICj-uo-WiR" secondAttribute="trailing" id="PA9-vv-Qir"/>
+                <constraint firstItem="ICj-uo-WiR" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="UBM-ql-mVM"/>
+                <constraint firstItem="ICj-uo-WiR" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="byz-ob-pYK"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="lblSearch" destination="n6T-0e-EZy" id="qHZ-U7-0Ni"/>
+                <outlet property="searchView" destination="ICj-uo-WiR" id="7VV-Sg-nsi"/>
+            </connections>
+            <point key="canvasLocation" x="24.5" y="474"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_search" width="50" height="50"/>
+    </resources>
+</document>
