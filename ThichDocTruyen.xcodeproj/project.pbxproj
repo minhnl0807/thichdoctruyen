@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C960AD820DB4A6000683929 /* MainStoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C960AD620DB4A6000683929 /* MainStoryCell.swift */; };
+		7C960AD920DB4A6000683929 /* MainStoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C960AD720DB4A6000683929 /* MainStoryCell.xib */; };
+		7C960ADC20DB7E0E00683929 /* UtilAnimates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C960ADB20DB7E0E00683929 /* UtilAnimates.swift */; };
 		7CA7214D20DA128F006531B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA7214C20DA128F006531B3 /* AppDelegate.swift */; };
 		7CA7214F20DA128F006531B3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA7214E20DA128F006531B3 /* MainViewController.swift */; };
 		7CA7215420DA1290006531B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CA7215320DA1290006531B3 /* Assets.xcassets */; };
@@ -32,13 +35,15 @@
 		7CA721AF20DA4E10006531B3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7CA721B120DA4E10006531B3 /* Localizable.strings */; };
 		7CA721B520DA4F7B006531B3 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA721B420DA4F7B006531B3 /* R.generated.swift */; };
 		7CA721B820DA54CE006531B3 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA721B720DA54CE006531B3 /* Extensions.swift */; };
-		F55D834621951E5E928AEEC8 /* libPods-ThichDocTruyen.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F3FC14937F51F8223A62056 /* libPods-ThichDocTruyen.a */; };
+		99ED3951C7E3DCF228C8DC27 /* Pods_ThichDocTruyen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B654C9F6DE9A8DD9A82EB425 /* Pods_ThichDocTruyen.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		015E807518D6479A33A21815 /* Pods-ThichDocTruyen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThichDocTruyen.release.xcconfig"; path = "Pods/Target Support Files/Pods-ThichDocTruyen/Pods-ThichDocTruyen.release.xcconfig"; sourceTree = "<group>"; };
 		4573DF78D9FE8A584AB480FE /* Pods-ThichDocTruyen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThichDocTruyen.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ThichDocTruyen/Pods-ThichDocTruyen.debug.xcconfig"; sourceTree = "<group>"; };
-		4F3FC14937F51F8223A62056 /* libPods-ThichDocTruyen.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ThichDocTruyen.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C960AD620DB4A6000683929 /* MainStoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStoryCell.swift; sourceTree = "<group>"; };
+		7C960AD720DB4A6000683929 /* MainStoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainStoryCell.xib; sourceTree = "<group>"; };
+		7C960ADB20DB7E0E00683929 /* UtilAnimates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilAnimates.swift; sourceTree = "<group>"; };
 		7CA7214920DA128F006531B3 /* ThichDocTruyen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThichDocTruyen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CA7214C20DA128F006531B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7CA7214E20DA128F006531B3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +72,7 @@
 		7CA721B220DA4E20006531B3 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7CA721B420DA4F7B006531B3 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		7CA721B720DA54CE006531B3 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		B654C9F6DE9A8DD9A82EB425 /* Pods_ThichDocTruyen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThichDocTruyen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F55D834621951E5E928AEEC8 /* libPods-ThichDocTruyen.a in Frameworks */,
+				99ED3951C7E3DCF228C8DC27 /* Pods_ThichDocTruyen.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,6 +199,7 @@
 			children = (
 				7CA7216920DA156D006531B3 /* DataManager.swift */,
 				7CA7217F20DA311D006531B3 /* Utils.swift */,
+				7C960ADB20DB7E0E00683929 /* UtilAnimates.swift */,
 			);
 			path = Singletons;
 			sourceTree = "<group>";
@@ -255,6 +262,8 @@
 			children = (
 				7CA7219B20DA488F006531B3 /* MainStoryView.swift */,
 				7CA7219D20DA4898006531B3 /* MainStoryView.xib */,
+				7C960AD620DB4A6000683929 /* MainStoryCell.swift */,
+				7C960AD720DB4A6000683929 /* MainStoryCell.xib */,
 			);
 			path = MainStory;
 			sourceTree = "<group>";
@@ -288,7 +297,7 @@
 		BE3539CF1E843EC979187D2A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4F3FC14937F51F8223A62056 /* libPods-ThichDocTruyen.a */,
+				B654C9F6DE9A8DD9A82EB425 /* Pods_ThichDocTruyen.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -301,10 +310,11 @@
 			buildConfigurationList = 7CA7215B20DA1290006531B3 /* Build configuration list for PBXNativeTarget "ThichDocTruyen" */;
 			buildPhases = (
 				2F3A509139239FAB914C4E7C /* [CP] Check Pods Manifest.lock */,
+				7CA721B320DA4F40006531B3 /* ShellScript */,
 				7CA7214520DA128F006531B3 /* Sources */,
 				7CA7214620DA128F006531B3 /* Frameworks */,
 				7CA7214720DA128F006531B3 /* Resources */,
-				7CA721B320DA4F40006531B3 /* ShellScript */,
+				B14BAF4842D975F1F61EB20C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -357,6 +367,7 @@
 				7CA7215720DA1290006531B3 /* LaunchScreen.storyboard in Resources */,
 				7CA7219E20DA4898006531B3 /* MainStoryView.xib in Resources */,
 				7CA7219720DA3D7D006531B3 /* MainFunctionView.xib in Resources */,
+				7C960AD920DB4A6000683929 /* MainStoryCell.xib in Resources */,
 				7CA7217120DA292F006531B3 /* MainViewController.xib in Resources */,
 				7CA7215420DA1290006531B3 /* Assets.xcassets in Resources */,
 				7CA721AF20DA4E10006531B3 /* Localizable.strings in Resources */,
@@ -399,6 +410,28 @@
 			shellPath = /bin/sh;
 			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT\"";
 		};
+		B14BAF4842D975F1F61EB20C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ThichDocTruyen/Pods-ThichDocTruyen-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ThichDocTruyen/Pods-ThichDocTruyen-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -412,6 +445,7 @@
 				7CA7214F20DA128F006531B3 /* MainViewController.swift in Sources */,
 				7CA7216A20DA156D006531B3 /* DataManager.swift in Sources */,
 				7CA7219520DA3D6D006531B3 /* MainFunctionView.swift in Sources */,
+				7C960ADC20DB7E0E00683929 /* UtilAnimates.swift in Sources */,
 				7CA7216D20DA160C006531B3 /* AppViewControllers.swift in Sources */,
 				7CA7217820DA2ECB006531B3 /* Views.swift in Sources */,
 				7CA7218920DA345E006531B3 /* Constants.swift in Sources */,
@@ -422,6 +456,7 @@
 				7CA7218720DA3446006531B3 /* Fonts.swift in Sources */,
 				7CA721B820DA54CE006531B3 /* Extensions.swift in Sources */,
 				7CA7218020DA311D006531B3 /* Utils.swift in Sources */,
+				7C960AD820DB4A6000683929 /* MainStoryCell.swift in Sources */,
 				7CA7218C20DA349C006531B3 /* FontHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

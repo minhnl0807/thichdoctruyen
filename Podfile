@@ -2,6 +2,8 @@
 # platform :ios, '9.0'
 
 target 'ThichDocTruyen' do
+  use_frameworks!
   pod 'R.swift'
   pod 'SDWebImage'
+  pod 'SwiftyJSON'
 end

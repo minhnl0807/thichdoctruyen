@@ -12,3 +12,7 @@ struct Views {
     static let MAIN_STORY      = "MainStoryView"
     static let MAIN_HEADER     = "MainHeaderView"
 }
+
+struct Cells {
+    static let MAIN_STORY = "MainStoryCell"
+}

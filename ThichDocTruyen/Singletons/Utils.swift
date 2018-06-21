@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class Utils {
     static let shared = Utils()
@@ -46,5 +47,10 @@ class Utils {
             textField.font = font
             return
         }
+    }
+    
+    /* UIImageView View Image Link Use SDWebImage */
+    func imageViewLoadImage(imgView: UIImageView, linkImage: String) {
+        imgView.sd_setImage(with: URL(string: linkImage), placeholderImage: UIImage())
     }
 }

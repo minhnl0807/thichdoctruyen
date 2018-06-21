@@ -15,6 +15,9 @@ class MainViewController: BaseViewController {
     var navigationView: MainNavigationView!
     var functionView: MainFunctionView!
     var headerView: MainHeaderView!
+    var headerView2: MainHeaderView!
+    var mainStory: MainStoryView!
+    var mainStory2: MainStoryView!
     var isSetBgImg: Bool = true
     
     override func viewDidLayoutSubviews() {
@@ -41,6 +44,12 @@ class MainViewController: BaseViewController {
         functionView.setupView()
         headerView = Bundle.main.loadNibNamed(Views.MAIN_HEADER, owner: self, options: nil)?.first as! MainHeaderView
         headerView.setupView()
+        mainStory = Bundle.main.loadNibNamed(Views.MAIN_STORY, owner: self, options: nil)?.first as! MainStoryView
+        mainStory.setupView()
+        headerView2 = Bundle.main.loadNibNamed(Views.MAIN_HEADER, owner: self, options: nil)?.first as! MainHeaderView
+        headerView2.setupView()
+        mainStory2 = Bundle.main.loadNibNamed(Views.MAIN_STORY, owner: self, options: nil)?.first as! MainStoryView
+        mainStory2.setupView()
         
         addNavigationBar()
     }
@@ -66,7 +75,7 @@ class MainViewController: BaseViewController {
 
 extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 4
+        return 5
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -83,6 +92,12 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
             return functionView
         case 1:
             return headerView
+        case 2:
+            return mainStory
+        case 3:
+            return headerView2
+        case 4:
+            return mainStory2
         default:
             return UIView()
         }
@@ -92,8 +107,10 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
         switch section {
         case 0:
             return Constants.HEIGHT_OF_SCREEN * 0.12
-        case 1:
+        case 1, 3:
             return 44
+        case 2, 4:
+            return ((Constants.WIDTH_OF_SCREEN / 4.2) * 2) * 2
         default:
             return 0
         }

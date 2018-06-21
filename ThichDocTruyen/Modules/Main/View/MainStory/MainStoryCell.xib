@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MainStoryCell" customModule="ThichDocTruyen" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="113" height="176"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="113" height="176"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G6H-RI-1PH">
+                        <rect key="frame" x="2" y="2" width="109" height="125.5"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Boruto" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IjN-SD-H0x">
+                        <rect key="frame" x="2" y="132.5" width="109" height="41.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="G6H-RI-1PH" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="1/1.4" id="15T-z3-krA"/>
+                <constraint firstAttribute="trailing" secondItem="G6H-RI-1PH" secondAttribute="trailing" constant="2" id="DnS-m0-68m"/>
+                <constraint firstItem="IjN-SD-H0x" firstAttribute="top" secondItem="G6H-RI-1PH" secondAttribute="bottom" constant="5" id="HYR-OE-zCx"/>
+                <constraint firstAttribute="bottom" secondItem="IjN-SD-H0x" secondAttribute="bottom" constant="2" id="KiN-8D-e2p"/>
+                <constraint firstItem="G6H-RI-1PH" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="2" id="V3d-If-nqu"/>
+                <constraint firstItem="IjN-SD-H0x" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="2" id="ohM-ol-RE3"/>
+                <constraint firstItem="G6H-RI-1PH" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="2" id="rXZ-tG-gkT"/>
+                <constraint firstAttribute="trailing" secondItem="IjN-SD-H0x" secondAttribute="trailing" constant="2" id="vIJ-Es-1X7"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="113" height="176"/>
+            <connections>
+                <outlet property="imgStory" destination="G6H-RI-1PH" id="h8g-a6-0KX"/>
+                <outlet property="lblStory" destination="IjN-SD-H0x" id="UpZ-rJ-Y33"/>
+            </connections>
+            <point key="canvasLocation" x="65.5" y="117"/>
+        </collectionViewCell>
+    </objects>
+</document>

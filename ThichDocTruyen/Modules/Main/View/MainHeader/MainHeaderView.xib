@@ -55,6 +55,7 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="btnMore" destination="zMB-Eh-twB" id="3Gc-J7-vCF"/>
+                <outlet property="imgHeader" destination="a2y-A4-HbC" id="5Ge-yb-l8P"/>
                 <outlet property="lblTItle" destination="2iT-Xv-iYf" id="vn6-90-Ubc"/>
                 <outlet property="widthOfBtnMore" destination="mn5-4N-7rG" id="j5P-EO-gVl"/>
             </connections>
@@ -62,6 +63,6 @@
         </view>
     </objects>
     <resources>
-        <image name="icon_newest" width="42" height="42"/>
+        <image name="icon_newest" width="50" height="50"/>
     </resources>
 </document>

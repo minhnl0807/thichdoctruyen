@@ -79,7 +79,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 5 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 6 nibs.
   struct nib {
     /// Nib `MainFunctionView`.
     static let mainFunctionView = _R.nib._MainFunctionView()
@@ -87,6 +87,8 @@ struct R: Rswift.Validatable {
     static let mainHeaderView = _R.nib._MainHeaderView()
     /// Nib `MainNavigationView`.
     static let mainNavigationView = _R.nib._MainNavigationView()
+    /// Nib `MainStoryCell`.
+    static let mainStoryCell = _R.nib._MainStoryCell()
     /// Nib `MainStoryView`.
     static let mainStoryView = _R.nib._MainStoryView()
     /// Nib `MainViewController`.
@@ -105,6 +107,11 @@ struct R: Rswift.Validatable {
     /// `UINib(name: "MainNavigationView", in: bundle)`
     static func mainNavigationView(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.mainNavigationView)
+    }
+    
+    /// `UINib(name: "MainStoryCell", in: bundle)`
+    static func mainStoryCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.mainStoryCell)
     }
     
     /// `UINib(name: "MainStoryView", in: bundle)`
@@ -260,12 +267,23 @@ struct _R: Rswift.Validatable {
       fileprivate init() {}
     }
     
+    struct _MainStoryCell: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "MainStoryCell"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> MainStoryCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? MainStoryCell
+      }
+      
+      fileprivate init() {}
+    }
+    
     struct _MainStoryView: Rswift.NibResourceType {
       let bundle = R.hostingBundle
       let name = "MainStoryView"
       
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> UIKit.UIView? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> MainStoryView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? MainStoryView
       }
       
       fileprivate init() {}

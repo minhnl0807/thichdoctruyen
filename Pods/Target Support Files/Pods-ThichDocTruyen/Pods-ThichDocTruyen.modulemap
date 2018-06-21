@@ -1,4 +1,4 @@
-module Pods_ThichDocTruyen {
+framework module Pods_ThichDocTruyen {
   umbrella header "Pods-ThichDocTruyen-umbrella.h"
 
   export *
