@@ -31,20 +31,29 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 6 images.
+  /// This `R.image` struct is generated, and contains static references to 8 images.
   struct image {
+    /// Image `bg_left`.
+    static let bg_left = Rswift.ImageResource(bundle: R.hostingBundle, name: "bg_left")
     /// Image `bg_main`.
     static let bg_main = Rswift.ImageResource(bundle: R.hostingBundle, name: "bg_main")
     /// Image `icon_classify`.
     static let icon_classify = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_classify")
     /// Image `icon_full_story`.
     static let icon_full_story = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_full_story")
+    /// Image `icon_menu`.
+    static let icon_menu = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_menu")
     /// Image `icon_newest`.
     static let icon_newest = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_newest")
     /// Image `icon_rank`.
     static let icon_rank = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_rank")
     /// Image `icon_search`.
     static let icon_search = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_search")
+    
+    /// `UIImage(named: "bg_left", bundle: ..., traitCollection: ...)`
+    static func bg_left(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.bg_left, compatibleWith: traitCollection)
+    }
     
     /// `UIImage(named: "bg_main", bundle: ..., traitCollection: ...)`
     static func bg_main(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
@@ -59,6 +68,11 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "icon_full_story", bundle: ..., traitCollection: ...)`
     static func icon_full_story(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.icon_full_story, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "icon_menu", bundle: ..., traitCollection: ...)`
+    static func icon_menu(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_menu, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "icon_newest", bundle: ..., traitCollection: ...)`
@@ -79,8 +93,10 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 6 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 7 nibs.
   struct nib {
+    /// Nib `LeftMenuViewController`.
+    static let leftMenuViewController = _R.nib._LeftMenuViewController()
     /// Nib `MainFunctionView`.
     static let mainFunctionView = _R.nib._MainFunctionView()
     /// Nib `MainHeaderView`.
@@ -93,6 +109,11 @@ struct R: Rswift.Validatable {
     static let mainStoryView = _R.nib._MainStoryView()
     /// Nib `MainViewController`.
     static let mainViewController = _R.nib._MainViewController()
+    
+    /// `UINib(name: "LeftMenuViewController", in: bundle)`
+    static func leftMenuViewController(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.leftMenuViewController)
+    }
     
     /// `UINib(name: "MainFunctionView", in: bundle)`
     static func mainFunctionView(_: Void = ()) -> UIKit.UINib {
@@ -162,7 +183,7 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, vi
       static let newestUpdate = Rswift.StringResource(key: "NewestUpdate", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "vi"], comment: nil)
-      /// en translation: Watch more>>
+      /// en translation: Watch more
       /// 
       /// Locales: en, vi
       static let watchMore = Rswift.StringResource(key: "WatchMore", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "vi"], comment: nil)
@@ -181,7 +202,7 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("NewestUpdate", bundle: R.hostingBundle, comment: "")
       }
       
-      /// en translation: Watch more>>
+      /// en translation: Watch more
       /// 
       /// Locales: en, vi
       static func watchMore(_: Void = ()) -> String {
@@ -214,10 +235,21 @@ struct _R: Rswift.Validatable {
   
   struct nib: Rswift.Validatable {
     static func validate() throws {
-      try _MainNavigationView.validate()
       try _MainViewController.validate()
-      try _MainHeaderView.validate()
       try _MainFunctionView.validate()
+      try _MainHeaderView.validate()
+      try _MainNavigationView.validate()
+    }
+    
+    struct _LeftMenuViewController: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "LeftMenuViewController"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> UIKit.UIView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+      }
+      
+      fileprivate init() {}
     }
     
     struct _MainFunctionView: Rswift.NibResourceType, Rswift.Validatable {
@@ -262,6 +294,7 @@ struct _R: Rswift.Validatable {
       
       static func validate() throws {
         if UIKit.UIImage(named: "icon_search", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_search' is used in nib 'MainNavigationView', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icon_menu", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_menu' is used in nib 'MainNavigationView', but couldn't be loaded.") }
       }
       
       fileprivate init() {}
@@ -298,7 +331,7 @@ struct _R: Rswift.Validatable {
       }
       
       static func validate() throws {
-        if UIKit.UIImage(named: "bg_main", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'bg_main' is used in nib 'MainViewController', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "bg_left", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'bg_left' is used in nib 'MainViewController', but couldn't be loaded.") }
       }
       
       fileprivate init() {}

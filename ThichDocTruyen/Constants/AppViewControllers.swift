@@ -8,4 +8,5 @@
 
 struct AppViewControllers {
     static let MAIN_VIEW_CONTROLLER = "MainViewController"
+    static let LEFT_MENU_VIEW_CONTROLLER = "LeftMenuViewController"
 }

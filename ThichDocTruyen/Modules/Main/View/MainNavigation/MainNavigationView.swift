@@ -1,3 +1,4 @@
+
 //
 //  MainNavigationView.swift
 //  ThichDocTruyen
@@ -7,6 +8,7 @@
 //
 
 import UIKit
+import SideMenu
 
 class MainNavigationView: UIView {
 
@@ -24,4 +26,7 @@ class MainNavigationView: UIView {
         closureSearchClick()
     }
     
+    @IBAction func showMenuClick(_ sender: Any) {
+        DataManager.shared.navigationController.present(SideMenuManager.default.menuLeftNavigationController!, animated: true, completion: nil)
+    }
 }

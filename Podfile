@@ -6,4 +6,5 @@ target 'ThichDocTruyen' do
   pod 'R.swift'
   pod 'SDWebImage'
   pod 'SwiftyJSON'
+  pod 'SideMenu'
 end

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SideMenu
 
 class MainViewController: BaseViewController {
     
@@ -52,6 +53,7 @@ class MainViewController: BaseViewController {
         mainStory2.setupView()
         
         addNavigationBar()
+        setupSideMenu()
     }
     
     func addNavigationBar() {
@@ -68,8 +70,31 @@ class MainViewController: BaseViewController {
         let blurEffect = UIBlurEffect(style: .dark)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = self.view.frame
-        blurEffectView.alpha = 1
+        blurEffectView.alpha = 0.9
         imgBg.addSubview(blurEffectView)
+    }
+    
+    func setupSideMenu() {
+        let leftMenuVC = LeftMenuViewController.init(nibName: AppViewControllers.LEFT_MENU_VIEW_CONTROLLER, bundle: nil)
+        
+        // Define the menus
+        let menuLeftNavigationController = UISideMenuNavigationController(rootViewController: leftMenuVC)
+        // UISideMenuNavigationController is a subclass of UINavigationController, so do any additional configuration
+        // of it here like setting its viewControllers.
+        SideMenuManager.default.menuLeftNavigationController = menuLeftNavigationController
+        
+        // Enable gestures. The left and/or right menus must be set up above for these to work.
+        // Note that these continue to work on the Navigation Controller independent of the view controller it displays!
+        SideMenuManager.default.menuAddPanGestureToPresent(toView: self.navigationController!.navigationBar)
+        SideMenuManager.default.menuAddScreenEdgePanGesturesToPresent(toView: self.navigationController!.view)
+        
+        SideMenuManager.default.menuPresentMode = .menuSlideIn
+        SideMenuManager.default.menuAnimationFadeStrength = 0.4
+        SideMenuManager.default.menuAnimationTransformScaleFactor = 0.8
+        SideMenuManager.default.menuFadeStatusBar = false
+        SideMenuManager.default.menuWidth = Constants.WIDTH_OF_SCREEN * 0.75
+        SideMenuManager.default.menuAnimationPresentDuration = 0.5
+        SideMenuManager.default.menuAnimationDismissDuration = 0.5
     }
 }
 
@@ -110,7 +135,7 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
         case 1, 3:
             return 44
         case 2, 4:
-            return ((Constants.WIDTH_OF_SCREEN / 4.2) * 2) * 2
+            return ((Constants.WIDTH_OF_SCREEN / 4.2) * 2) * 2 + 10
         default:
             return 0
         }

@@ -10,6 +10,8 @@
 		7C960AD820DB4A6000683929 /* MainStoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C960AD620DB4A6000683929 /* MainStoryCell.swift */; };
 		7C960AD920DB4A6000683929 /* MainStoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C960AD720DB4A6000683929 /* MainStoryCell.xib */; };
 		7C960ADC20DB7E0E00683929 /* UtilAnimates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C960ADB20DB7E0E00683929 /* UtilAnimates.swift */; };
+		7C960AE120DBAC5200683929 /* LeftMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C960AE020DBAC5200683929 /* LeftMenuViewController.swift */; };
+		7C960AE320DBAC5B00683929 /* LeftMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C960AE220DBAC5B00683929 /* LeftMenuViewController.xib */; };
 		7CA7214D20DA128F006531B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA7214C20DA128F006531B3 /* AppDelegate.swift */; };
 		7CA7214F20DA128F006531B3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA7214E20DA128F006531B3 /* MainViewController.swift */; };
 		7CA7215420DA1290006531B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CA7215320DA1290006531B3 /* Assets.xcassets */; };
@@ -44,6 +46,8 @@
 		7C960AD620DB4A6000683929 /* MainStoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStoryCell.swift; sourceTree = "<group>"; };
 		7C960AD720DB4A6000683929 /* MainStoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainStoryCell.xib; sourceTree = "<group>"; };
 		7C960ADB20DB7E0E00683929 /* UtilAnimates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilAnimates.swift; sourceTree = "<group>"; };
+		7C960AE020DBAC5200683929 /* LeftMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftMenuViewController.swift; sourceTree = "<group>"; };
+		7C960AE220DBAC5B00683929 /* LeftMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftMenuViewController.xib; sourceTree = "<group>"; };
 		7CA7214920DA128F006531B3 /* ThichDocTruyen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThichDocTruyen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CA7214C20DA128F006531B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7CA7214E20DA128F006531B3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +91,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7C960ADD20DBA9DF00683929 /* LeftMenu */ = {
+			isa = PBXGroup;
+			children = (
+				7C960ADF20DBAC4600683929 /* Controller */,
+				7C960ADE20DBAC3A00683929 /* View */,
+			);
+			path = LeftMenu;
+			sourceTree = "<group>";
+		};
+		7C960ADE20DBAC3A00683929 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7C960AE220DBAC5B00683929 /* LeftMenuViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7C960ADF20DBAC4600683929 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7C960AE020DBAC5200683929 /* LeftMenuViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		7CA7214020DA128F006531B3 = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +186,7 @@
 		7CA7216220DA14E5006531B3 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				7C960ADD20DBA9DF00683929 /* LeftMenu */,
 				7CA7216F20DA1744006531B3 /* Splash */,
 				7CA7216E20DA173D006531B3 /* Base */,
 				7CA7216320DA14ED006531B3 /* Main */,
@@ -372,6 +402,7 @@
 				7CA7215420DA1290006531B3 /* Assets.xcassets in Resources */,
 				7CA721AF20DA4E10006531B3 /* Localizable.strings in Resources */,
 				7CA7219020DA36F6006531B3 /* MainNavigationView.xib in Resources */,
+				7C960AE320DBAC5B00683929 /* LeftMenuViewController.xib in Resources */,
 				7CA721A320DA49DC006531B3 /* MainHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,12 +450,14 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-ThichDocTruyen/Pods-ThichDocTruyen-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -453,6 +486,7 @@
 				7CA721A120DA49D4006531B3 /* MainHeaderView.swift in Sources */,
 				7CA721B520DA4F7B006531B3 /* R.generated.swift in Sources */,
 				7CA7217A20DA2F95006531B3 /* BaseViewController.swift in Sources */,
+				7C960AE120DBAC5200683929 /* LeftMenuViewController.swift in Sources */,
 				7CA7218720DA3446006531B3 /* Fonts.swift in Sources */,
 				7CA721B820DA54CE006531B3 /* Extensions.swift in Sources */,
 				7CA7218020DA311D006531B3 /* Utils.swift in Sources */,
