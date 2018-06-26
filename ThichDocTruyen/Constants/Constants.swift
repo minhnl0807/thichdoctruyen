@@ -31,3 +31,4 @@ let nameDemo: [String] = ["Yu Yu Hakusho Movie 2",
                           "Attack On Titans Season 1",
                           "Mê Cung Trong Thành Phố Cổ (Conan)",
                           "One Punch Man"]
+let categoryDemo: [String] = ["Hành động", "Trinh thám", "Hài hước", "Lãng mạn", "Viễn tưởng", "Võ thuật"]

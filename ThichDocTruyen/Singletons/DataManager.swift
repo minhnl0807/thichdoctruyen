@@ -11,4 +11,5 @@ import UIKit
 class DataManager: NSObject {
     static let shared = DataManager()
     var navigationController: UINavigationController!
+    var mainViewController: MainViewController!
 }

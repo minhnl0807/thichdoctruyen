@@ -20,7 +20,6 @@ class MainStoryView: UIView {
         cltStory.register(UINib(nibName: Cells.MAIN_STORY, bundle: nil), forCellWithReuseIdentifier: Cells.MAIN_STORY)
         cltStory.backgroundColor = .clear
     }
-
 }
 
 extension MainStoryView: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -43,9 +42,15 @@ extension MainStoryView: UICollectionViewDelegate, UICollectionViewDataSource, U
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = cltStory.cellForItem(at: indexPath)
-        UtilAnimates.shared.animateSelectStory(cell: cell!) {
-            
+        if let cell = cltStory.cellForItem(at: indexPath) as? MainStoryCell {
+            UtilAnimates.shared.animateSelectStory(cell: cell) {
+                UtilAnimates.shared.animatePresent(view: cell, completion: { view in
+                    let detailStoryVC = DetailStoryViewController.init(nibName: ViewControllers.DETAIL_STORY_VIEW_CONTROLLER, bundle: nil)
+                    detailStoryVC.imageView = view.imgStory
+                    view.removeFromSuperview()
+                    DataManager.shared.navigationController.present(detailStoryVC, animated: false, completion: nil)
+                })
+            }
         }
     }
 }

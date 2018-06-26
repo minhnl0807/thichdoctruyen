@@ -27,7 +27,7 @@ class UtilAnimates {
     }
     
     func animateHigtlightImage(image: UIView) {
-        image.transform = CGAffineTransform(scaleX: 0.8, y: 0.9)
+        image.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
         UIView.animate(withDuration: 1, animations: {
             image.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
         }) { (_) in
@@ -36,6 +36,47 @@ class UtilAnimates {
             }, completion: { (_) in
                 self.animateHigtlightImage(image: image)
             })
+        }
+    }
+    
+    func animatePresent(view: UIView, completion: @escaping (MainStoryCell) -> ()) {
+        if let v = view as? MainStoryCell {
+            let viewFly = Bundle.main.loadNibNamed(Cells.MAIN_STORY, owner: DataManager.shared.navigationController, options: nil)?.first as! MainStoryCell
+            viewFly.frame = v.frame
+            viewFly.imgStory.image = v.imgStory.image
+            
+            viewFly.frame.origin = (v.superview?.convert(v.frame.origin, to: nil))!
+            viewFly.lblStory.isHidden = true
+            DataManager.shared.navigationController.topViewController?.view.addSubview(viewFly)
+            
+            UIView.animate(withDuration: 0.5, animations: {
+                viewFly.frame.origin.x = DataManager.shared.navigationController.view.center.x - (viewFly.frame.size.width / 2)
+                viewFly.frame.origin.y = DataManager.shared.navigationController.view.center.y - (viewFly.frame.size.height / 2)
+                viewFly.alpha = 0.5
+            }) { (_) in
+                completion(viewFly)
+            }
+        }
+    }
+    
+    func animateAppearViewController(viewController: UIViewController, completion: @escaping () -> ()) {
+        viewController.view.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+        //viewController.view.frame.origin = CGPoint(x: 8, y: 72)
+        //Utils.shared.setConerRadiusForView(view: viewController.view, num: Constants.HEIGHT_OF_SCREEN)
+        UIView.animate(withDuration: 0.5, animations: {
+            viewController.view.transform = CGAffineTransform.identity
+            //viewController.view.frame.origin = CGPoint(x: 0, y: 20)
+            //Utils.shared.setConerRadiusForView(view: viewController.view, num: 0)
+        }) { (_) in
+            completion()
+        }
+    }
+    
+    func animateDisappearViewController(viewController: UIViewController) {
+        UIView.animate(withDuration: 0.5, animations: {
+            viewController.view.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+        }) { (_) in
+            viewController.dismiss(animated: false, completion: nil)
         }
     }
 }

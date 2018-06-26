@@ -16,6 +16,7 @@ class MainStoryCell: UICollectionViewCell {
     func setupView(url: String, name: String) {
         Utils.shared.setTextForView(view: lblStory, title: name, font: Fonts.FONT13_SF, color: .white)
         Utils.shared.imageViewLoadImage(imgView: imgStory, linkImage: url)
+        Utils.shared.setBorderColorForView(view: imgStory, borderWidth: 1, color: .white)
         self.backgroundColor = .clear
     }
 }

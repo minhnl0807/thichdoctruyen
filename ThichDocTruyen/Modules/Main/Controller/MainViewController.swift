@@ -9,7 +9,7 @@
 import UIKit
 import SideMenu
 
-class MainViewController: BaseViewController {
+class MainViewController: UIViewController {
     
     @IBOutlet weak var tbMain: UITableView!
     @IBOutlet weak var imgBg: UIImageView!
@@ -17,8 +17,10 @@ class MainViewController: BaseViewController {
     var functionView: MainFunctionView!
     var headerView: MainHeaderView!
     var headerView2: MainHeaderView!
+    var headerView3: MainHeaderView!
     var mainStory: MainStoryView!
     var mainStory2: MainStoryView!
+    var mainStory3: MainStoryView!
     var isSetBgImg: Bool = true
     
     override func viewDidLayoutSubviews() {
@@ -51,6 +53,10 @@ class MainViewController: BaseViewController {
         headerView2.setupView()
         mainStory2 = Bundle.main.loadNibNamed(Views.MAIN_STORY, owner: self, options: nil)?.first as! MainStoryView
         mainStory2.setupView()
+        headerView3 = Bundle.main.loadNibNamed(Views.MAIN_HEADER, owner: self, options: nil)?.first as! MainHeaderView
+        headerView3.setupView()
+        mainStory3 = Bundle.main.loadNibNamed(Views.MAIN_STORY, owner: self, options: nil)?.first as! MainStoryView
+        mainStory3.setupView()
         
         addNavigationBar()
         setupSideMenu()
@@ -75,7 +81,7 @@ class MainViewController: BaseViewController {
     }
     
     func setupSideMenu() {
-        let leftMenuVC = LeftMenuViewController.init(nibName: AppViewControllers.LEFT_MENU_VIEW_CONTROLLER, bundle: nil)
+        let leftMenuVC = LeftMenuViewController.init(nibName: ViewControllers.LEFT_MENU_VIEW_CONTROLLER, bundle: nil)
         
         // Define the menus
         let menuLeftNavigationController = UISideMenuNavigationController(rootViewController: leftMenuVC)
@@ -86,7 +92,7 @@ class MainViewController: BaseViewController {
         // Enable gestures. The left and/or right menus must be set up above for these to work.
         // Note that these continue to work on the Navigation Controller independent of the view controller it displays!
         SideMenuManager.default.menuAddPanGestureToPresent(toView: self.navigationController!.navigationBar)
-        SideMenuManager.default.menuAddScreenEdgePanGesturesToPresent(toView: self.navigationController!.view)
+        //SideMenuManager.default.menuAddScreenEdgePanGesturesToPresent(toView: self.navigationController!.view)
         
         SideMenuManager.default.menuPresentMode = .menuSlideIn
         SideMenuManager.default.menuAnimationFadeStrength = 0.4
@@ -100,7 +106,7 @@ class MainViewController: BaseViewController {
 
 extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 5
+        return 7
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -123,6 +129,10 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
             return headerView2
         case 4:
             return mainStory2
+        case 5:
+            return headerView3
+        case 6:
+            return mainStory3
         default:
             return UIView()
         }
@@ -132,13 +142,12 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
         switch section {
         case 0:
             return Constants.HEIGHT_OF_SCREEN * 0.12
-        case 1, 3:
+        case 1, 3, 5:
             return 44
-        case 2, 4:
+        case 2, 4, 6:
             return ((Constants.WIDTH_OF_SCREEN / 4.2) * 2) * 2 + 10
         default:
             return 0
         }
     }
 }
-

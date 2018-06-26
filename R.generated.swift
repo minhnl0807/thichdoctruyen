@@ -31,12 +31,16 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 8 images.
+  /// This `R.image` struct is generated, and contains static references to 10 images.
   struct image {
+    /// Image `bg_detail`.
+    static let bg_detail = Rswift.ImageResource(bundle: R.hostingBundle, name: "bg_detail")
     /// Image `bg_left`.
     static let bg_left = Rswift.ImageResource(bundle: R.hostingBundle, name: "bg_left")
     /// Image `bg_main`.
     static let bg_main = Rswift.ImageResource(bundle: R.hostingBundle, name: "bg_main")
+    /// Image `icon_back`.
+    static let icon_back = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_back")
     /// Image `icon_classify`.
     static let icon_classify = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_classify")
     /// Image `icon_full_story`.
@@ -50,6 +54,11 @@ struct R: Rswift.Validatable {
     /// Image `icon_search`.
     static let icon_search = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_search")
     
+    /// `UIImage(named: "bg_detail", bundle: ..., traitCollection: ...)`
+    static func bg_detail(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.bg_detail, compatibleWith: traitCollection)
+    }
+    
     /// `UIImage(named: "bg_left", bundle: ..., traitCollection: ...)`
     static func bg_left(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.bg_left, compatibleWith: traitCollection)
@@ -58,6 +67,11 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "bg_main", bundle: ..., traitCollection: ...)`
     static func bg_main(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.bg_main, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "icon_back", bundle: ..., traitCollection: ...)`
+    static func icon_back(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_back, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "icon_classify", bundle: ..., traitCollection: ...)`
@@ -93,8 +107,16 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 7 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 11 nibs.
   struct nib {
+    /// Nib `BaseNavigationView`.
+    static let baseNavigationView = _R.nib._BaseNavigationView()
+    /// Nib `CategoryStoryCell`.
+    static let categoryStoryCell = _R.nib._CategoryStoryCell()
+    /// Nib `DetailStoryViewController`.
+    static let detailStoryViewController = _R.nib._DetailStoryViewController()
+    /// Nib `HeaderStoryView`.
+    static let headerStoryView = _R.nib._HeaderStoryView()
     /// Nib `LeftMenuViewController`.
     static let leftMenuViewController = _R.nib._LeftMenuViewController()
     /// Nib `MainFunctionView`.
@@ -109,6 +131,26 @@ struct R: Rswift.Validatable {
     static let mainStoryView = _R.nib._MainStoryView()
     /// Nib `MainViewController`.
     static let mainViewController = _R.nib._MainViewController()
+    
+    /// `UINib(name: "BaseNavigationView", in: bundle)`
+    static func baseNavigationView(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.baseNavigationView)
+    }
+    
+    /// `UINib(name: "CategoryStoryCell", in: bundle)`
+    static func categoryStoryCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.categoryStoryCell)
+    }
+    
+    /// `UINib(name: "DetailStoryViewController", in: bundle)`
+    static func detailStoryViewController(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.detailStoryViewController)
+    }
+    
+    /// `UINib(name: "HeaderStoryView", in: bundle)`
+    static func headerStoryView(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.headerStoryView)
+    }
     
     /// `UINib(name: "LeftMenuViewController", in: bundle)`
     static func leftMenuViewController(_: Void = ()) -> UIKit.UINib {
@@ -173,8 +215,12 @@ struct R: Rswift.Validatable {
   
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 3 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 5 localization keys.
     struct localizable {
+      /// en translation: Author: 
+      /// 
+      /// Locales: en, vi
+      static let author = Rswift.StringResource(key: "Author", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "vi"], comment: nil)
       /// en translation: Enter key word
       /// 
       /// Locales: en, vi
@@ -183,10 +229,21 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, vi
       static let newestUpdate = Rswift.StringResource(key: "NewestUpdate", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "vi"], comment: nil)
+      /// en translation: Views: 
+      /// 
+      /// Locales: en, vi
+      static let views = Rswift.StringResource(key: "Views", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "vi"], comment: nil)
       /// en translation: Watch more
       /// 
       /// Locales: en, vi
       static let watchMore = Rswift.StringResource(key: "WatchMore", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "vi"], comment: nil)
+      
+      /// en translation: Author: 
+      /// 
+      /// Locales: en, vi
+      static func author(_: Void = ()) -> String {
+        return NSLocalizedString("Author", bundle: R.hostingBundle, comment: "")
+      }
       
       /// en translation: Enter key word
       /// 
@@ -200,6 +257,13 @@ struct R: Rswift.Validatable {
       /// Locales: en, vi
       static func newestUpdate(_: Void = ()) -> String {
         return NSLocalizedString("NewestUpdate", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Views: 
+      /// 
+      /// Locales: en, vi
+      static func views(_: Void = ()) -> String {
+        return NSLocalizedString("Views", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Watch more
@@ -237,8 +301,57 @@ struct _R: Rswift.Validatable {
     static func validate() throws {
       try _MainViewController.validate()
       try _MainFunctionView.validate()
+      try _BaseNavigationView.validate()
       try _MainHeaderView.validate()
       try _MainNavigationView.validate()
+    }
+    
+    struct _BaseNavigationView: Rswift.NibResourceType, Rswift.Validatable {
+      let bundle = R.hostingBundle
+      let name = "BaseNavigationView"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> BaseNavigationView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? BaseNavigationView
+      }
+      
+      static func validate() throws {
+        if UIKit.UIImage(named: "icon_back", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_back' is used in nib 'BaseNavigationView', but couldn't be loaded.") }
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _CategoryStoryCell: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "CategoryStoryCell"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> CategoryStoryCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? CategoryStoryCell
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _DetailStoryViewController: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "DetailStoryViewController"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> UIKit.UIView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _HeaderStoryView: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "HeaderStoryView"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> HeaderStoryView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? HeaderStoryView
+      }
+      
+      fileprivate init() {}
     }
     
     struct _LeftMenuViewController: Rswift.NibResourceType {

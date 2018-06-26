@@ -23,3 +23,9 @@ extension String {
         return ceil(boundingBox.width)
     }
 }
+
+extension UIView {
+    func copyView() -> AnyObject{
+        return NSKeyedUnarchiver.unarchiveObject(with: NSKeyedArchiver.archivedData(withRootObject: self))! as AnyObject
+    }
+}

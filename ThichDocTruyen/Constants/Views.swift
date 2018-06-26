@@ -11,8 +11,11 @@ struct Views {
     static let MAIN_FUNCTION   = "MainFunctionView"
     static let MAIN_STORY      = "MainStoryView"
     static let MAIN_HEADER     = "MainHeaderView"
+    static let BASE_NAVIGATION = "BaseNavigationView"
+    static let HEADER_STORY    = "HeaderStoryView"
 }
 
 struct Cells {
-    static let MAIN_STORY = "MainStoryCell"
+    static let MAIN_STORY     = "MainStoryCell"
+    static let CATEGORY_STORY = "CategoryStoryCell"
 }
