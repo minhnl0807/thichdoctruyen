@@ -24,7 +24,7 @@
                         <rect key="frame" x="2" y="2" width="109" height="125.5"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Boruto" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IjN-SD-H0x">
-                        <rect key="frame" x="2" y="132.5" width="109" height="41.5"/>
+                        <rect key="frame" x="5" y="132.5" width="103" height="16"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -35,11 +35,10 @@
                 <constraint firstItem="G6H-RI-1PH" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="1/1.4" id="15T-z3-krA"/>
                 <constraint firstAttribute="trailing" secondItem="G6H-RI-1PH" secondAttribute="trailing" constant="2" id="DnS-m0-68m"/>
                 <constraint firstItem="IjN-SD-H0x" firstAttribute="top" secondItem="G6H-RI-1PH" secondAttribute="bottom" constant="5" id="HYR-OE-zCx"/>
-                <constraint firstAttribute="bottom" secondItem="IjN-SD-H0x" secondAttribute="bottom" constant="2" id="KiN-8D-e2p"/>
                 <constraint firstItem="G6H-RI-1PH" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="2" id="V3d-If-nqu"/>
-                <constraint firstItem="IjN-SD-H0x" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="2" id="ohM-ol-RE3"/>
+                <constraint firstItem="IjN-SD-H0x" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="ohM-ol-RE3"/>
                 <constraint firstItem="G6H-RI-1PH" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="2" id="rXZ-tG-gkT"/>
-                <constraint firstAttribute="trailing" secondItem="IjN-SD-H0x" secondAttribute="trailing" constant="2" id="vIJ-Es-1X7"/>
+                <constraint firstAttribute="trailing" secondItem="IjN-SD-H0x" secondAttribute="trailing" constant="5" id="vIJ-Es-1X7"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="113" height="176"/>

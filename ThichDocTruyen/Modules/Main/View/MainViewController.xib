@@ -13,7 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="ThichDocTruyen" customModuleProvider="target">
             <connections>
                 <outlet property="imgBg" destination="y37-aM-hH1" id="7ci-8A-Lrh"/>
-                <outlet property="tbMain" destination="4eX-KW-d8A" id="hfo-7f-zeP"/>
+                <outlet property="tabbarView" destination="4U6-Fb-kHh" id="YHC-0G-kRv"/>
                 <outlet property="view" destination="iN0-l3-epB" id="bOT-pf-OfA"/>
             </connections>
         </placeholder>
@@ -25,23 +25,26 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_left" translatesAutoresizingMaskIntoConstraints="NO" id="y37-aM-hH1">
                     <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                 </imageView>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4eX-KW-d8A">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4U6-Fb-kHh">
+                    <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                </tableView>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="Z1i-iH-VbG"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="4eX-KW-d8A" secondAttribute="bottom" id="0YK-2R-OcT"/>
-                <constraint firstItem="4eX-KW-d8A" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="I3M-bM-ofK"/>
+                <constraint firstItem="4U6-Fb-kHh" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="Bfx-Xr-tPB"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="4U6-Fb-kHh" secondAttribute="trailing" id="SGB-Zl-Jm2"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="y37-aM-hH1" secondAttribute="bottom" id="YYj-z9-CdZ"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="4eX-KW-d8A" secondAttribute="trailing" id="kUC-vG-cJO"/>
+                <constraint firstItem="4U6-Fb-kHh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="jhu-5Z-YO9"/>
                 <constraint firstItem="y37-aM-hH1" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="nDs-8N-Jk4"/>
                 <constraint firstItem="y37-aM-hH1" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ogH-7l-HXG"/>
-                <constraint firstItem="4eX-KW-d8A" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="q3v-J9-w8D"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="y37-aM-hH1" secondAttribute="trailing" id="t2H-tl-Jge"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
         </view>
     </objects>
     <resources>

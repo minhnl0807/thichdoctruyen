@@ -16,13 +16,14 @@ class DetailStoryViewController: BaseViewController {
     var imageView: UIImageView!
     var headerStory: HeaderStoryView!
     var window: UIWindow!
+    var story: StoryModel!
     
     override func navigationBarView() -> UIView? {
         return navigationView
     }
     
     override func navigationBarTitle() -> String? {
-        return "Tên chuyện"
+        return story.name
     }
     
     override func viewDidLayoutSubviews() {
@@ -59,7 +60,7 @@ class DetailStoryViewController: BaseViewController {
         tbStory.separatorColor = .clear
         
         headerStory = Bundle.main.loadNibNamed(Views.HEADER_STORY, owner: self, options: nil)?.first as! HeaderStoryView
-        headerStory.setupView(imageView: self.imageView, storyName: "Đừng như thói quen", author: "Jaykii", viewCount: 1000)
+        headerStory.setupView(imageView: self.imageView, storyName: story.name!, author: story.author!, viewCount: story.viewCount!)
         
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true

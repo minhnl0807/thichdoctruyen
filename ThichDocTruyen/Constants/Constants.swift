@@ -14,8 +14,10 @@ struct Constants {
     static let HEIGHT_OF_SCREEN = UIScreen.main.bounds.height
 }
 
-/* Demo Image and Story */
-let urlDemoImage: [String] = ["http://images.amazon.com/images/P/B00006HAYG.01.LZZZZZZZ.jpg",
+/* Demo */
+let isHashCode: Bool = true
+
+let urlImageDemo: [String] = ["http://images.amazon.com/images/P/B00006HAYG.01.LZZZZZZZ.jpg",
                               "http://t2.gstatic.com/images?q=tbn:ANd9GcT3NmcjhaWEKAW80Yo8KtPBve1yOZ51PgHDXgu1Hl0DT19W5EPRiw",
                               "https://myanimelist.cdn-dena.com/images/anime/8/20483.jpg",
                               "https://m.media-amazon.com/images/M/MV5BZmQ5NGFiNWEtMmMyMC00MDdiLTg4YjktOGY5Yzc2MDUxMTE1XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_UY268_CR0,0,182,268_AL_.jpg",
@@ -31,4 +33,12 @@ let nameDemo: [String] = ["Yu Yu Hakusho Movie 2",
                           "Attack On Titans Season 1",
                           "Mê Cung Trong Thành Phố Cổ (Conan)",
                           "One Punch Man"]
-let categoryDemo: [String] = ["Hành động", "Trinh thám", "Hài hước", "Lãng mạn", "Viễn tưởng", "Võ thuật"]
+let categoryDemo: [String] = ["Hành động",
+                              "Trinh thám",
+                              "Hài hước",
+                              "Lãng mạn",
+                              "Viễn tưởng",
+                              "Võ thuật"]
+/* Splash Image */
+let splashImages: [UIImage] = [R.image.bg_left()!, R.image.splash()!, R.image.splash2()!]
+let bannerImages: [UIImage] = [R.image.banner()!, R.image.banner2()!, R.image.banner3()!, R.image.banner4()!]
