@@ -15,8 +15,10 @@ class DetailStoryViewController: BaseViewController {
     var isFirstSetupBGImg: Bool = true
     var imageView: UIImageView!
     var headerStory: HeaderStoryView!
+    var introStory: IntroStoryView!
     var window: UIWindow!
     var story: StoryModel!
+    var isClickedMore: Bool = false
     
     override func navigationBarView() -> UIView? {
         return navigationView
@@ -42,9 +44,11 @@ class DetailStoryViewController: BaseViewController {
         super.viewDidAppear(animated)
         UtilAnimates.shared.animateAppearViewController(viewController: self) {
             self.imageView.removeFromSuperview()
-            self.imageView = nil
-            //self.window.removeFromSuperview()
         }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
     }
     
     override func viewDidLoad() {
@@ -58,16 +62,20 @@ class DetailStoryViewController: BaseViewController {
         tbStory.delegate = self
         tbStory.dataSource = self
         tbStory.separatorColor = .clear
+        tbStory.delaysContentTouches = false
         
         headerStory = Bundle.main.loadNibNamed(Views.HEADER_STORY, owner: self, options: nil)?.first as! HeaderStoryView
         headerStory.setupView(imageView: self.imageView, storyName: story.name!, author: story.author!, viewCount: story.viewCount!)
+        introStory = Bundle.main.loadNibNamed(Views.INTRO_STORY, owner: self, options: nil)?.first as! IntroStoryView
+        introStory.closureMoreClick = {
+            self.isClickedMore = !self.isClickedMore
+            self.tbStory.reloadSections(IndexSet(integersIn: 1...1), with: self.isClickedMore ? .left : .right)
+        }
+        introStory.setupView(intro: story.intro!)
         
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         imageView.frame.origin = CGPoint(x: 8, y: 72)
-        
-        //window = UIApplication.shared.keyWindow != nil ? UIApplication.shared.keyWindow! : UIWindow.init(frame: UIScreen.main.bounds)
-        //window.addSubview(imageView)
     }
     
     func setupBackgroundImage() {
@@ -89,7 +97,7 @@ class DetailStoryViewController: BaseViewController {
 
 extension DetailStoryViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 2
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -104,6 +112,8 @@ extension DetailStoryViewController: UITableViewDelegate, UITableViewDataSource 
         switch section {
         case 0:
             return headerStory
+        case 1:
+            return introStory
         default:
             return UIView()
         }
@@ -112,7 +122,15 @@ extension DetailStoryViewController: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         switch section {
         case 0:
-            return imageView.frame.size.height + 48
+            return imageView.frame.size.height + 50
+        case 1:
+            // 15.25 per line
+            if story.intro!.height(withConstrainedWidth: introStory.lblContent.frame.size.width, font: Fonts.FONT13_SF) > (15.25 * 5) && !isClickedMore {
+                introStory.btnMore.isHidden = false
+                return 15.25 * 5 + 50
+            }
+            introStory.btnMore.isHidden = isClickedMore ? false : true
+            return story.intro!.height(withConstrainedWidth: introStory.lblContent.frame.size.width, font: Fonts.FONT13_SF) + 50
         default:
             return 0
         }

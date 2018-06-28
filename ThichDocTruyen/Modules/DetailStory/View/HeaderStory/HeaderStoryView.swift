@@ -26,7 +26,7 @@ class HeaderStoryView: UIView {
         heightOfImgStory.constant = imageView.frame.size.height
         Utils.shared.setBorderColorForView(view: imgStory, borderWidth: 1, color: .white)
         
-        Utils.shared.setTextForView(view: lblStoryName, title: storyName, font: Fonts.FONT17_SF_BOLD, color: .white)
+        Utils.shared.setTextForView(view: lblStoryName, title: storyName, font: Fonts.FONT16_SF_BOLD, color: .white)
         heightOfLblStrName.constant = (lblStoryName.text?.height(withConstrainedWidth: lblStoryName.frame.size.width, font: Fonts.FONT16_SF_BOLD))!
         
         Utils.shared.setTextForView(view: lblAuthor, title: R.string.localizable.author() + author, font: Fonts.FONT14_SF_ITALIC, color: .white)
@@ -47,16 +47,16 @@ extension HeaderStoryView: UICollectionViewDelegate, UICollectionViewDataSource,
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return categoryDemo.count
+        return categoriesDemo.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = cltCategory.dequeueReusableCell(withReuseIdentifier: Cells.CATEGORY_STORY, for: indexPath) as! CategoryStoryCell
-        cell.setupView(text: categoryDemo[indexPath.item])
+        cell.setupView(text: categoriesDemo[indexPath.item])
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: categoryDemo[indexPath.item].width(withConstraintedHeight: 28, font: Fonts.FONT12_SF) + 15, height: 28)
+        return CGSize(width: categoriesDemo[indexPath.item].width(withConstraintedHeight: 20, font: Fonts.FONT12_SF) + 15, height: 20)
     }
 }

@@ -40,13 +40,12 @@ class BaseViewController: UIViewController {
     /* setup navigation bar for view */
     func setupNavigationBar() {
         if navigationBarEnabled() {
-            //self.navigationController?.setNavigationBarHidden(true, animated: true)
             baseNavigation = (Bundle.main.loadNibNamed(Views.BASE_NAVIGATION, owner: self, options: nil)?.first as? BaseNavigationView)!
             baseNavigation.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 44)
             baseNavigation.closureBackClick = {
                 UtilAnimates.shared.animateDisappearViewController(viewController: self)
             }
-            Utils.shared.setTextForView(view: baseNavigation.lblTitle, title: navigationBarTitle(), font: Fonts.FONT17_SF, color: .black)
+            Utils.shared.setTextForView(view: baseNavigation.lblTitle, title: navigationBarTitle(), font: Fonts.FONT16_SF, color: .black)
             baseNavigation.lblTitle.sizeToFit()
             self.navigationBarView()?.addSubview(self.baseNavigation)
         }

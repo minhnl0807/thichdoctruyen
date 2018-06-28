@@ -27,5 +27,6 @@ struct Fonts {
     static let FONT16_SF_BOLD = fontApp(size: FontSizes.size16, name: FontNames.HelveticaNeueBold)
     static let FONT17_SF_BOLD = fontApp(size: FontSizes.size17, name: FontNames.HelveticaNeueBold)
     static let FONT28_SF_BOLD = fontApp(size: FontSizes.size28, name: FontNames.HelveticaNeueBold)
+    static let FONT12_SF_ITALIC = fontApp(size: FontSizes.size12, name: FontNames.HelveticaNeueItalic)
     static let FONT14_SF_ITALIC = fontApp(size: FontSizes.size14, name: FontNames.HelveticaNeueItalic)
 }

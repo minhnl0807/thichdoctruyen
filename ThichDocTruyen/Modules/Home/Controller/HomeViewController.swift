@@ -63,41 +63,12 @@ class HomeViewController: UIViewController {
     
     // hashcode list story
     func hashcode() {
-        let story1 = StoryModel.init(name: nameDemo[0], author: "Cristiano Ronaldo", viewCount: 258, intro: "", url: urlImageDemo[0], categories: categoryDemo)
-        let story2 = StoryModel.init(name: nameDemo[1], author: "Leonel Messi", viewCount: 194, intro: "", url: urlImageDemo[1], categories: categoryDemo)
-        let story3 = StoryModel.init(name: nameDemo[2], author: "Neymar", viewCount: 9472, intro: "", url: urlImageDemo[2], categories: categoryDemo)
-        let story4 = StoryModel.init(name: nameDemo[3], author: "Eden Hazard", viewCount: 3124, intro: "", url: urlImageDemo[3], categories: categoryDemo)
-        let story5 = StoryModel.init(name: nameDemo[4], author: "Toni Kroos", viewCount: 318, intro: "", url: urlImageDemo[4], categories: categoryDemo)
-        let story6 = StoryModel.init(name: nameDemo[5], author: "Hary Kane", viewCount: 2848, intro: "", url: urlImageDemo[5], categories: categoryDemo)
-        let story7 = StoryModel.init(name: nameDemo[6], author: "Gareth Bale", viewCount: 5938, intro: "", url: urlImageDemo[6], categories: categoryDemo)
-        let story8 = StoryModel.init(name: nameDemo[7], author: "Manuel Neuer", viewCount: 1282, intro: "", url: urlImageDemo[7], categories: categoryDemo)
-        
-        listStories.append(story1)
-        listStories.append(story2)
-        listStories.append(story3)
-        listStories.append(story4)
-        listStories.append(story5)
-        listStories.append(story6)
-        listStories.append(story7)
-        listStories.append(story8)
-        
-        listStories2.append(story8)
-        listStories2.append(story3)
-        listStories2.append(story1)
-        listStories2.append(story5)
-        listStories2.append(story7)
-        listStories2.append(story4)
-        listStories2.append(story6)
-        listStories2.append(story2)
-        
-        listStories3.append(story3)
-        listStories3.append(story1)
-        listStories3.append(story6)
-        listStories3.append(story5)
-        listStories3.append(story7)
-        listStories3.append(story8)
-        listStories3.append(story2)
-        listStories3.append(story4)
+        for i in 0 ... nameDemo.count - 1 {
+            let story = StoryModel.init(name: nameDemo[i], author: authorDemo[i], viewCount: 2580, intro: introDemo[i], url: urlImageDemo[i], categories: categoriesDemo)
+            listStories.append(story)
+            listStories2.append(story)
+            listStories3.append(story)
+        }
     }
 }
 
@@ -150,11 +121,11 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         case 6:
             return listStories3.count == 0 ? 0 : 44
         case 3:
-            return listStories.count <= 8 ? listStories.count == 0 ? 0 : ((Constants.WIDTH_OF_SCREEN / 8.4) * 2) * 2 + 10 : ((Constants.WIDTH_OF_SCREEN / 4.2) * 2) * 2 + 10
+            return listStories.count <= Config.NUMBER_STORY_PER_ROW ? listStories.count == 0 ? 0 : ((Constants.WIDTH_OF_SCREEN / 8.4) * 2) * 2 + 10 : ((Constants.WIDTH_OF_SCREEN / 4.2) * 2) * 2 + 10
         case 5:
-            return listStories2.count <= 8 ? listStories2.count == 0 ? 0 : ((Constants.WIDTH_OF_SCREEN / 8.4) * 2) * 2 + 10 : ((Constants.WIDTH_OF_SCREEN / 4.2) * 2) * 2 + 10
+            return listStories2.count <= Config.NUMBER_STORY_PER_ROW ? listStories2.count == 0 ? 0 : ((Constants.WIDTH_OF_SCREEN / 8.4) * 2) * 2 + 10 : ((Constants.WIDTH_OF_SCREEN / 4.2) * 2) * 2 + 10
         case 7:
-            return listStories3.count <= 8 ? listStories3.count == 0 ? 0 : ((Constants.WIDTH_OF_SCREEN / 8.4) * 2) * 2 + 10 : ((Constants.WIDTH_OF_SCREEN / 4.2) * 2) * 2 + 10
+            return listStories3.count <= Config.NUMBER_STORY_PER_ROW ? listStories3.count == 0 ? 0 : ((Constants.WIDTH_OF_SCREEN / 8.4) * 2) * 2 + 10 : ((Constants.WIDTH_OF_SCREEN / 4.2) * 2) * 2 + 10
         default:
             return 0
         }

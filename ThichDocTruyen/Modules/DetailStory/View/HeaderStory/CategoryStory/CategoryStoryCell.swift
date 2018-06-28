@@ -14,6 +14,6 @@ class CategoryStoryCell: UICollectionViewCell {
     
     func setupView(text: String) {
         Utils.shared.setTextForView(view: lblCategory, title: "#" + text, font: Fonts.FONT12_SF, color: .white)
-        Utils.shared.setConerRadiusForView(view: self, num: 14)
+        Utils.shared.setConerRadiusForView(view: self, num: 10)
     }
 }

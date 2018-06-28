@@ -13,12 +13,65 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="IntroStoryView" customModule="ThichDocTruyen" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="144"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="109"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ca0-cz-PCx">
+                    <rect key="frame" x="16" y="32" width="343" height="61"/>
+                    <string key="text">Yu Yu Hakusho is a Japanese manga series written and illustrated by Yoshihiro Togashi. The series tells the story of    Yusuke Urameshi, a teenage delinquent who is struck and killed by a car while attempting to save a child's life.</string>
+                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="11"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view alpha="0.25" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WFJ-WU-k7S">
+                    <rect key="frame" x="0.0" y="101" width="375" height="8"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="8" id="8sE-ZI-r20"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Giới thiệu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJS-2O-INE">
+                    <rect key="frame" x="16" y="8" width="58" height="16"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="16" id="u24-Ki-JdK"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pzR-BF-ueE">
+                    <rect key="frame" x="329" y="8" width="30" height="16"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="16" id="9Dd-Xu-bG1"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <action selector="moreClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="B3a-3O-XHg"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="BJS-2O-INE" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="146-fg-vYP"/>
+                <constraint firstAttribute="trailing" secondItem="WFJ-WU-k7S" secondAttribute="trailing" id="AvJ-Wk-Cq0"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="pzR-BF-ueE" secondAttribute="trailing" constant="16" id="DYn-bV-Gy4"/>
+                <constraint firstItem="Ca0-cz-PCx" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="FZh-tc-d28"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Ca0-cz-PCx" secondAttribute="bottom" constant="16" id="HWR-au-had"/>
+                <constraint firstItem="pzR-BF-ueE" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="IK6-io-ddK"/>
+                <constraint firstItem="WFJ-WU-k7S" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="MRn-cv-KNG"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="WFJ-WU-k7S" secondAttribute="bottom" id="Mu4-WC-FD9"/>
+                <constraint firstItem="Ca0-cz-PCx" firstAttribute="top" secondItem="BJS-2O-INE" secondAttribute="bottom" constant="8" id="Tpk-og-wrG"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Ca0-cz-PCx" secondAttribute="trailing" constant="16" id="caz-NO-djx"/>
+                <constraint firstItem="BJS-2O-INE" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="zTK-SA-YQf"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="33.5" y="315"/>
+            <connections>
+                <outlet property="btnMore" destination="pzR-BF-ueE" id="yKC-am-39h"/>
+                <outlet property="lblContent" destination="Ca0-cz-PCx" id="HeU-Gy-HlJ"/>
+                <outlet property="lblIntro" destination="BJS-2O-INE" id="abq-BI-SR6"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="297.5"/>
         </view>
     </objects>
 </document>

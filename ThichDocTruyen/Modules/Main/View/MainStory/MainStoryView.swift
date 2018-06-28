@@ -27,16 +27,27 @@ class MainStoryView: UIView {
 
 extension MainStoryView: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return listStories.count <= 8 ? 1 : 2
+        return listStories.count <= Config.NUMBER_STORY_PER_ROW ? 1 : 2
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return listStories.count
+        if listStories.count <= Config.NUMBER_STORY_PER_ROW {
+            return listStories.count
+        } else {
+            switch section {
+            case 0:
+                return Config.NUMBER_STORY_PER_ROW
+            default:
+                return listStories.count - Config.NUMBER_STORY_PER_ROW
+            }
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = cltStory.dequeueReusableCell(withReuseIdentifier: Cells.MAIN_STORY, for: indexPath) as! MainStoryCell
-        cell.setupView(story: listStories[indexPath.item])
+        let indexStory = indexPath.row + (Config.NUMBER_STORY_PER_ROW * indexPath.section)
+        let story = listStories[indexStory]
+        cell.setupView(story: story)
         return cell
     }
     
@@ -50,7 +61,8 @@ extension MainStoryView: UICollectionViewDelegate, UICollectionViewDataSource, U
                 UtilAnimates.shared.animatePresent(view: cell, completion: { view in
                     let detailStoryVC = DetailStoryViewController.init(nibName: ViewControllers.DETAIL_STORY_VIEW_CONTROLLER, bundle: nil)
                     detailStoryVC.imageView = view.imgStory
-                    detailStoryVC.story = self.listStories[indexPath.row]
+                    let indexStory = indexPath.row + (Config.NUMBER_STORY_PER_ROW * indexPath.section)
+                    detailStoryVC.story = self.listStories[indexStory]
                     view.removeFromSuperview()
                     DataManager.shared.navigationController.present(detailStoryVC, animated: false, completion: nil)
                 })

@@ -299,7 +299,7 @@ struct R: Rswift.Validatable {
   
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 6 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 8 localization keys.
     struct localizable {
       /// en translation: Author: 
       /// 
@@ -313,6 +313,14 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, vi
       static let enterKeyWord = Rswift.StringResource(key: "EnterKeyWord", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "vi"], comment: nil)
+      /// en translation: Hide
+      /// 
+      /// Locales: en, vi
+      static let hide = Rswift.StringResource(key: "Hide", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "vi"], comment: nil)
+      /// en translation: Intro
+      /// 
+      /// Locales: en, vi
+      static let intro = Rswift.StringResource(key: "Intro", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "vi"], comment: nil)
       /// en translation: Newest Update
       /// 
       /// Locales: en, vi
@@ -345,6 +353,20 @@ struct R: Rswift.Validatable {
       /// Locales: en, vi
       static func enterKeyWord(_: Void = ()) -> String {
         return NSLocalizedString("EnterKeyWord", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Hide
+      /// 
+      /// Locales: en, vi
+      static func hide(_: Void = ()) -> String {
+        return NSLocalizedString("Hide", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Intro
+      /// 
+      /// Locales: en, vi
+      static func intro(_: Void = ()) -> String {
+        return NSLocalizedString("Intro", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Newest Update

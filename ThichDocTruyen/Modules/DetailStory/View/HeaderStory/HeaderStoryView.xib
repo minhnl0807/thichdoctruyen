@@ -13,7 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HeaderStoryView" customModule="ThichDocTruyen" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="153"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="157"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4tG-At-w9q">
@@ -23,8 +23,8 @@
                         <constraint firstAttribute="height" constant="110" id="lbw-Ji-stb"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Những cuộc phiêu lưu của Swift" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVv-aD-dHP">
-                    <rect key="frame" x="117" y="16" width="242" height="18"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Những cuộc phiêu lưu của SwiftNhững cuộc phiêu lưu của Swift" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVv-aD-dHP">
+                    <rect key="frame" x="117" y="11" width="242" height="18"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="18" id="DzU-1N-JZQ"/>
                     </constraints>
@@ -39,10 +39,10 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eZi-RM-CIC">
-                    <rect key="frame" x="117" y="42" width="242" height="80"/>
+                    <rect key="frame" x="117" y="37" width="242" height="85"/>
                     <subviews>
                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Uff-P3-6dy">
-                            <rect key="frame" x="0.0" y="0.0" width="242" height="80"/>
+                            <rect key="frame" x="0.0" y="0.0" width="242" height="85"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="V6z-S1-rss">
                                 <size key="itemSize" width="50" height="50"/>
@@ -60,11 +60,11 @@
                         <constraint firstAttribute="bottom" secondItem="Uff-P3-6dy" secondAttribute="bottom" id="iK1-Pc-mxH"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="762-zf-fLQ">
-                    <rect key="frame" x="0.0" y="151" width="375" height="1"/>
+                <view alpha="0.25" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="762-zf-fLQ">
+                    <rect key="frame" x="0.0" y="148" width="375" height="8"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="1" id="mf1-Iz-qGj"/>
+                        <constraint firstAttribute="height" constant="8" id="mf1-Iz-qGj"/>
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Số lượt xem: 100k" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wic-Ae-jXf">
@@ -83,10 +83,10 @@
                 <constraint firstItem="762-zf-fLQ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Yc8-zR-699"/>
                 <constraint firstItem="eZi-RM-CIC" firstAttribute="top" secondItem="HVv-aD-dHP" secondAttribute="bottom" constant="8" id="a1z-wo-vTL"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="eZi-RM-CIC" secondAttribute="trailing" constant="16" id="bCE-Qi-MzW"/>
-                <constraint firstItem="HVv-aD-dHP" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="cz8-rd-9Xh"/>
                 <constraint firstItem="65w-SW-rPB" firstAttribute="centerY" secondItem="Wic-Ae-jXf" secondAttribute="centerY" id="h7X-dD-Ipt"/>
                 <constraint firstItem="4tG-At-w9q" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="iUW-RS-03y"/>
                 <constraint firstItem="Wic-Ae-jXf" firstAttribute="top" secondItem="4tG-At-w9q" secondAttribute="bottom" constant="5" id="qAj-6u-ARy"/>
+                <constraint firstItem="HVv-aD-dHP" firstAttribute="top" secondItem="4tG-At-w9q" secondAttribute="top" constant="-5" id="s4v-T2-UG5"/>
                 <constraint firstAttribute="trailing" secondItem="HVv-aD-dHP" secondAttribute="trailing" constant="16" id="v0s-x3-WA2"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="762-zf-fLQ" secondAttribute="trailing" id="vJG-gm-8LJ"/>
                 <constraint firstItem="Wic-Ae-jXf" firstAttribute="centerX" secondItem="4tG-At-w9q" secondAttribute="centerX" id="x2V-x3-UcY"/>
@@ -105,7 +105,7 @@
                 <outlet property="lblViewCount" destination="Wic-Ae-jXf" id="iQ6-VJ-pDw"/>
                 <outlet property="widthOfImgStory" destination="Clx-Gf-Rdj" id="BDg-P8-yUH"/>
             </connections>
-            <point key="canvasLocation" x="33.5" y="216.5"/>
+            <point key="canvasLocation" x="33.5" y="218.5"/>
         </view>
     </objects>
 </document>
