@@ -31,24 +31,81 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 6 images.
+  /// This `R.image` struct is generated, and contains static references to 17 images.
   struct image {
+    /// Image `banner2`.
+    static let banner2 = Rswift.ImageResource(bundle: R.hostingBundle, name: "banner2")
+    /// Image `banner3`.
+    static let banner3 = Rswift.ImageResource(bundle: R.hostingBundle, name: "banner3")
+    /// Image `banner4`.
+    static let banner4 = Rswift.ImageResource(bundle: R.hostingBundle, name: "banner4")
+    /// Image `banner`.
+    static let banner = Rswift.ImageResource(bundle: R.hostingBundle, name: "banner")
+    /// Image `bg_detail`.
+    static let bg_detail = Rswift.ImageResource(bundle: R.hostingBundle, name: "bg_detail")
+    /// Image `bg_left`.
+    static let bg_left = Rswift.ImageResource(bundle: R.hostingBundle, name: "bg_left")
     /// Image `bg_main`.
     static let bg_main = Rswift.ImageResource(bundle: R.hostingBundle, name: "bg_main")
+    /// Image `icon_back`.
+    static let icon_back = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_back")
     /// Image `icon_classify`.
     static let icon_classify = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_classify")
     /// Image `icon_full_story`.
     static let icon_full_story = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_full_story")
+    /// Image `icon_menu`.
+    static let icon_menu = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_menu")
     /// Image `icon_newest`.
     static let icon_newest = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_newest")
     /// Image `icon_rank`.
     static let icon_rank = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_rank")
+    /// Image `icon_right_arrow`.
+    static let icon_right_arrow = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_right_arrow")
     /// Image `icon_search`.
     static let icon_search = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_search")
+    /// Image `splash2`.
+    static let splash2 = Rswift.ImageResource(bundle: R.hostingBundle, name: "splash2")
+    /// Image `splash`.
+    static let splash = Rswift.ImageResource(bundle: R.hostingBundle, name: "splash")
+    
+    /// `UIImage(named: "banner", bundle: ..., traitCollection: ...)`
+    static func banner(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.banner, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "banner2", bundle: ..., traitCollection: ...)`
+    static func banner2(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.banner2, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "banner3", bundle: ..., traitCollection: ...)`
+    static func banner3(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.banner3, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "banner4", bundle: ..., traitCollection: ...)`
+    static func banner4(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.banner4, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "bg_detail", bundle: ..., traitCollection: ...)`
+    static func bg_detail(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.bg_detail, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "bg_left", bundle: ..., traitCollection: ...)`
+    static func bg_left(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.bg_left, compatibleWith: traitCollection)
+    }
     
     /// `UIImage(named: "bg_main", bundle: ..., traitCollection: ...)`
     static func bg_main(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.bg_main, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "icon_back", bundle: ..., traitCollection: ...)`
+    static func icon_back(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_back, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "icon_classify", bundle: ..., traitCollection: ...)`
@@ -61,6 +118,11 @@ struct R: Rswift.Validatable {
       return UIKit.UIImage(resource: R.image.icon_full_story, compatibleWith: traitCollection)
     }
     
+    /// `UIImage(named: "icon_menu", bundle: ..., traitCollection: ...)`
+    static func icon_menu(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_menu, compatibleWith: traitCollection)
+    }
+    
     /// `UIImage(named: "icon_newest", bundle: ..., traitCollection: ...)`
     static func icon_newest(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.icon_newest, compatibleWith: traitCollection)
@@ -71,16 +133,55 @@ struct R: Rswift.Validatable {
       return UIKit.UIImage(resource: R.image.icon_rank, compatibleWith: traitCollection)
     }
     
+    /// `UIImage(named: "icon_right_arrow", bundle: ..., traitCollection: ...)`
+    static func icon_right_arrow(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_right_arrow, compatibleWith: traitCollection)
+    }
+    
     /// `UIImage(named: "icon_search", bundle: ..., traitCollection: ...)`
     static func icon_search(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.icon_search, compatibleWith: traitCollection)
     }
     
+    /// `UIImage(named: "splash", bundle: ..., traitCollection: ...)`
+    static func splash(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.splash, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "splash2", bundle: ..., traitCollection: ...)`
+    static func splash2(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.splash2, compatibleWith: traitCollection)
+    }
+    
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 6 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 21 nibs.
   struct nib {
+    /// Nib `BaseNavigationView`.
+    static let baseNavigationView = _R.nib._BaseNavigationView()
+    /// Nib `CategoryStoryCell`.
+    static let categoryStoryCell = _R.nib._CategoryStoryCell()
+    /// Nib `ChapterCell`.
+    static let chapterCell = _R.nib._ChapterCell()
+    /// Nib `ChapterStoryView`.
+    static let chapterStoryView = _R.nib._ChapterStoryView()
+    /// Nib `DetailChapterCell`.
+    static let detailChapterCell = _R.nib._DetailChapterCell()
+    /// Nib `DetailChapterViewController`.
+    static let detailChapterViewController = _R.nib._DetailChapterViewController()
+    /// Nib `DetailStoryViewController`.
+    static let detailStoryViewController = _R.nib._DetailStoryViewController()
+    /// Nib `HeaderStoryView`.
+    static let headerStoryView = _R.nib._HeaderStoryView()
+    /// Nib `HomeViewController`.
+    static let homeViewController = _R.nib._HomeViewController()
+    /// Nib `IntroStoryView`.
+    static let introStoryView = _R.nib._IntroStoryView()
+    /// Nib `LeftMenuViewController`.
+    static let leftMenuViewController = _R.nib._LeftMenuViewController()
+    /// Nib `MainBannerView`.
+    static let mainBannerView = _R.nib._MainBannerView()
     /// Nib `MainFunctionView`.
     static let mainFunctionView = _R.nib._MainFunctionView()
     /// Nib `MainHeaderView`.
@@ -91,8 +192,74 @@ struct R: Rswift.Validatable {
     static let mainStoryCell = _R.nib._MainStoryCell()
     /// Nib `MainStoryView`.
     static let mainStoryView = _R.nib._MainStoryView()
+    /// Nib `MainTabbarView`.
+    static let mainTabbarView = _R.nib._MainTabbarView()
     /// Nib `MainViewController`.
     static let mainViewController = _R.nib._MainViewController()
+    /// Nib `SplashCell`.
+    static let splashCell = _R.nib._SplashCell()
+    /// Nib `SplashViewController`.
+    static let splashViewController = _R.nib._SplashViewController()
+    
+    /// `UINib(name: "BaseNavigationView", in: bundle)`
+    static func baseNavigationView(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.baseNavigationView)
+    }
+    
+    /// `UINib(name: "CategoryStoryCell", in: bundle)`
+    static func categoryStoryCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.categoryStoryCell)
+    }
+    
+    /// `UINib(name: "ChapterCell", in: bundle)`
+    static func chapterCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.chapterCell)
+    }
+    
+    /// `UINib(name: "ChapterStoryView", in: bundle)`
+    static func chapterStoryView(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.chapterStoryView)
+    }
+    
+    /// `UINib(name: "DetailChapterCell", in: bundle)`
+    static func detailChapterCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.detailChapterCell)
+    }
+    
+    /// `UINib(name: "DetailChapterViewController", in: bundle)`
+    static func detailChapterViewController(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.detailChapterViewController)
+    }
+    
+    /// `UINib(name: "DetailStoryViewController", in: bundle)`
+    static func detailStoryViewController(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.detailStoryViewController)
+    }
+    
+    /// `UINib(name: "HeaderStoryView", in: bundle)`
+    static func headerStoryView(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.headerStoryView)
+    }
+    
+    /// `UINib(name: "HomeViewController", in: bundle)`
+    static func homeViewController(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.homeViewController)
+    }
+    
+    /// `UINib(name: "IntroStoryView", in: bundle)`
+    static func introStoryView(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.introStoryView)
+    }
+    
+    /// `UINib(name: "LeftMenuViewController", in: bundle)`
+    static func leftMenuViewController(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.leftMenuViewController)
+    }
+    
+    /// `UINib(name: "MainBannerView", in: bundle)`
+    static func mainBannerView(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.mainBannerView)
+    }
     
     /// `UINib(name: "MainFunctionView", in: bundle)`
     static func mainFunctionView(_: Void = ()) -> UIKit.UINib {
@@ -119,9 +286,24 @@ struct R: Rswift.Validatable {
       return UIKit.UINib(resource: R.nib.mainStoryView)
     }
     
+    /// `UINib(name: "MainTabbarView", in: bundle)`
+    static func mainTabbarView(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.mainTabbarView)
+    }
+    
     /// `UINib(name: "MainViewController", in: bundle)`
     static func mainViewController(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.mainViewController)
+    }
+    
+    /// `UINib(name: "SplashCell", in: bundle)`
+    static func splashCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.splashCell)
+    }
+    
+    /// `UINib(name: "SplashViewController", in: bundle)`
+    static func splashViewController(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.splashViewController)
     }
     
     fileprivate init() {}
@@ -152,26 +334,101 @@ struct R: Rswift.Validatable {
   
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 3 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 13 localization keys.
     struct localizable {
+      /// en translation: Author: 
+      /// 
+      /// Locales: en, vi
+      static let author = Rswift.StringResource(key: "Author", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "vi"], comment: nil)
+      /// en translation: Cancel
+      /// 
+      /// Locales: en, vi
+      static let cancel = Rswift.StringResource(key: "Cancel", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "vi"], comment: nil)
+      /// en translation: Chapter
+      /// 
+      /// Locales: en, vi
+      static let chapter = Rswift.StringResource(key: "Chapter", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "vi"], comment: nil)
       /// en translation: Enter key word
       /// 
       /// Locales: en, vi
       static let enterKeyWord = Rswift.StringResource(key: "EnterKeyWord", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "vi"], comment: nil)
+      /// en translation: Hide
+      /// 
+      /// Locales: en, vi
+      static let hide = Rswift.StringResource(key: "Hide", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "vi"], comment: nil)
+      /// en translation: Kind of
+      /// 
+      /// Locales: en, vi
+      static let kindOf = Rswift.StringResource(key: "KindOf", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "vi"], comment: nil)
       /// en translation: Newest Update
       /// 
       /// Locales: en, vi
       static let newestUpdate = Rswift.StringResource(key: "NewestUpdate", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "vi"], comment: nil)
-      /// en translation: Watch more>>
+      /// en translation: Sort by newest ⏬
+      /// 
+      /// Locales: en, vi
+      static let sortNewest = Rswift.StringResource(key: "SortNewest", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "vi"], comment: nil)
+      /// en translation: Sort by oldest ⏫
+      /// 
+      /// Locales: en, vi
+      static let sortOldest = Rswift.StringResource(key: "SortOldest", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "vi"], comment: nil)
+      /// en translation: Views: 
+      /// 
+      /// Locales: en, vi
+      static let views = Rswift.StringResource(key: "Views", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "vi"], comment: nil)
+      /// en translation: Watch more
       /// 
       /// Locales: en, vi
       static let watchMore = Rswift.StringResource(key: "WatchMore", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "vi"], comment: nil)
+      /// en translation: ⚪ Content
+      /// 
+      /// Locales: en, vi
+      static let content = Rswift.StringResource(key: "Content", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "vi"], comment: nil)
+      /// en translation: ⚪ Intro
+      /// 
+      /// Locales: en, vi
+      static let intro = Rswift.StringResource(key: "Intro", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "vi"], comment: nil)
+      
+      /// en translation: Author: 
+      /// 
+      /// Locales: en, vi
+      static func author(_: Void = ()) -> String {
+        return NSLocalizedString("Author", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Cancel
+      /// 
+      /// Locales: en, vi
+      static func cancel(_: Void = ()) -> String {
+        return NSLocalizedString("Cancel", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Chapter
+      /// 
+      /// Locales: en, vi
+      static func chapter(_: Void = ()) -> String {
+        return NSLocalizedString("Chapter", bundle: R.hostingBundle, comment: "")
+      }
       
       /// en translation: Enter key word
       /// 
       /// Locales: en, vi
       static func enterKeyWord(_: Void = ()) -> String {
         return NSLocalizedString("EnterKeyWord", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Hide
+      /// 
+      /// Locales: en, vi
+      static func hide(_: Void = ()) -> String {
+        return NSLocalizedString("Hide", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Kind of
+      /// 
+      /// Locales: en, vi
+      static func kindOf(_: Void = ()) -> String {
+        return NSLocalizedString("KindOf", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Newest Update
@@ -181,11 +438,46 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("NewestUpdate", bundle: R.hostingBundle, comment: "")
       }
       
-      /// en translation: Watch more>>
+      /// en translation: Sort by newest ⏬
+      /// 
+      /// Locales: en, vi
+      static func sortNewest(_: Void = ()) -> String {
+        return NSLocalizedString("SortNewest", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Sort by oldest ⏫
+      /// 
+      /// Locales: en, vi
+      static func sortOldest(_: Void = ()) -> String {
+        return NSLocalizedString("SortOldest", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Views: 
+      /// 
+      /// Locales: en, vi
+      static func views(_: Void = ()) -> String {
+        return NSLocalizedString("Views", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Watch more
       /// 
       /// Locales: en, vi
       static func watchMore(_: Void = ()) -> String {
         return NSLocalizedString("WatchMore", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: ⚪ Content
+      /// 
+      /// Locales: en, vi
+      static func content(_: Void = ()) -> String {
+        return NSLocalizedString("Content", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: ⚪ Intro
+      /// 
+      /// Locales: en, vi
+      static func intro(_: Void = ()) -> String {
+        return NSLocalizedString("Intro", bundle: R.hostingBundle, comment: "")
       }
       
       fileprivate init() {}
@@ -214,10 +506,152 @@ struct _R: Rswift.Validatable {
   
   struct nib: Rswift.Validatable {
     static func validate() throws {
+      try _ChapterCell.validate()
+      try _BaseNavigationView.validate()
       try _MainNavigationView.validate()
       try _MainViewController.validate()
-      try _MainHeaderView.validate()
       try _MainFunctionView.validate()
+      try _MainHeaderView.validate()
+    }
+    
+    struct _BaseNavigationView: Rswift.NibResourceType, Rswift.Validatable {
+      let bundle = R.hostingBundle
+      let name = "BaseNavigationView"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> BaseNavigationView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? BaseNavigationView
+      }
+      
+      static func validate() throws {
+        if UIKit.UIImage(named: "icon_back", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_back' is used in nib 'BaseNavigationView', but couldn't be loaded.") }
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _CategoryStoryCell: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "CategoryStoryCell"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> CategoryStoryCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? CategoryStoryCell
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _ChapterCell: Rswift.NibResourceType, Rswift.Validatable {
+      let bundle = R.hostingBundle
+      let name = "ChapterCell"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> ChapterCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? ChapterCell
+      }
+      
+      static func validate() throws {
+        if UIKit.UIImage(named: "icon_right_arrow", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_right_arrow' is used in nib 'ChapterCell', but couldn't be loaded.") }
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _ChapterStoryView: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "ChapterStoryView"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> ChapterStoryView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? ChapterStoryView
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _DetailChapterCell: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "DetailChapterCell"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> DetailChapterCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? DetailChapterCell
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _DetailChapterViewController: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "DetailChapterViewController"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> UIKit.UIView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _DetailStoryViewController: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "DetailStoryViewController"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> UIKit.UIView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _HeaderStoryView: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "HeaderStoryView"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> HeaderStoryView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? HeaderStoryView
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _HomeViewController: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "HomeViewController"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> UIKit.UIView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _IntroStoryView: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "IntroStoryView"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> IntroStoryView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? IntroStoryView
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _LeftMenuViewController: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "LeftMenuViewController"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> UIKit.UIView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _MainBannerView: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "MainBannerView"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> MainBannerView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? MainBannerView
+      }
+      
+      fileprivate init() {}
     }
     
     struct _MainFunctionView: Rswift.NibResourceType, Rswift.Validatable {
@@ -262,6 +696,7 @@ struct _R: Rswift.Validatable {
       
       static func validate() throws {
         if UIKit.UIImage(named: "icon_search", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_search' is used in nib 'MainNavigationView', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icon_menu", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_menu' is used in nib 'MainNavigationView', but couldn't be loaded.") }
       }
       
       fileprivate init() {}
@@ -289,6 +724,17 @@ struct _R: Rswift.Validatable {
       fileprivate init() {}
     }
     
+    struct _MainTabbarView: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "MainTabbarView"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> MainTabbarView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? MainTabbarView
+      }
+      
+      fileprivate init() {}
+    }
+    
     struct _MainViewController: Rswift.NibResourceType, Rswift.Validatable {
       let bundle = R.hostingBundle
       let name = "MainViewController"
@@ -298,7 +744,29 @@ struct _R: Rswift.Validatable {
       }
       
       static func validate() throws {
-        if UIKit.UIImage(named: "bg_main", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'bg_main' is used in nib 'MainViewController', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "bg_left", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'bg_left' is used in nib 'MainViewController', but couldn't be loaded.") }
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _SplashCell: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "SplashCell"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> SplashCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? SplashCell
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _SplashViewController: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "SplashViewController"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> UIKit.UIView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
       }
       
       fileprivate init() {}

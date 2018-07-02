@@ -8,4 +8,14 @@
 
 "EnterKeyWord" = "Enter key word";
 "NewestUpdate" = "Newest Update";
-"WatchMore"    = "Watch more>>";
+"WatchMore"    = "Watch more";
+"Author"       = "Author: ";
+"Views"        = "Views: ";
+"Cancel"       = "Cancel";
+"Intro"        = "⚪ Intro";
+"Hide"         = "Hide";
+"KindOf"       = "Kind of";
+"Content"      = "⚪ Content";
+"Chapter"      = "Chapter";
+"SortNewest"       = "Sort by newest ⏬";
+"SortOldest"       = "Sort by oldest ⏫";

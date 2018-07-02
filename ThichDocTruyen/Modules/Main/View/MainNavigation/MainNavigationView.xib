@@ -19,17 +19,17 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ICj-uo-WiR">
-                    <rect key="frame" x="62" y="7" width="250" height="30"/>
+                    <rect key="frame" x="70" y="7" width="234" height="30"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_search" translatesAutoresizingMaskIntoConstraints="NO" id="IqL-KQ-Faq">
-                            <rect key="frame" x="51" y="8" width="15" height="15"/>
+                            <rect key="frame" x="43" y="8" width="15" height="15"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="IqL-KQ-Faq" secondAttribute="height" multiplier="1:1" id="7Wi-yD-9VM"/>
                                 <constraint firstAttribute="width" constant="15" id="wX6-LY-TGp"/>
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nhập từ khoá" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n6T-0e-EZy">
-                            <rect key="frame" x="82" y="6.5" width="87.5" height="17"/>
+                            <rect key="frame" x="74" y="6.5" width="87.5" height="17"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <color key="textColor" red="0.6705882352941176" green="0.6705882352941176" blue="0.6705882352941176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
@@ -45,20 +45,32 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hs8-vx-P3a">
-                    <rect key="frame" x="62" y="7" width="250" height="30"/>
+                    <rect key="frame" x="70" y="7" width="234" height="30"/>
                     <connections>
                         <action selector="searchClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="TaC-Cl-fHH"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0O-VS-6uq">
+                    <rect key="frame" x="16" y="12" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="20" id="dzg-3R-Hne"/>
+                        <constraint firstAttribute="width" secondItem="W0O-VS-6uq" secondAttribute="height" multiplier="1:1" id="iBe-zC-YWd"/>
+                    </constraints>
+                    <state key="normal" image="icon_menu"/>
+                    <connections>
+                        <action selector="showMenuClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="8Li-JF-82w"/>
+                    </connections>
+                </button>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="Hs8-vx-P3a" firstAttribute="leading" secondItem="ICj-uo-WiR" secondAttribute="leading" id="74p-3V-VUZ"/>
-                <constraint firstItem="ICj-uo-WiR" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="1/1.5" id="90w-c4-ak6"/>
+                <constraint firstItem="ICj-uo-WiR" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="1/1.6" id="90w-c4-ak6"/>
                 <constraint firstItem="Hs8-vx-P3a" firstAttribute="bottom" secondItem="ICj-uo-WiR" secondAttribute="bottom" id="C80-Pc-c7e"/>
                 <constraint firstItem="Hs8-vx-P3a" firstAttribute="top" secondItem="ICj-uo-WiR" secondAttribute="top" id="EeI-fn-Sid"/>
+                <constraint firstItem="W0O-VS-6uq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="L6B-FL-Eqy"/>
                 <constraint firstItem="Hs8-vx-P3a" firstAttribute="trailing" secondItem="ICj-uo-WiR" secondAttribute="trailing" id="PA9-vv-Qir"/>
                 <constraint firstItem="ICj-uo-WiR" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="UBM-ql-mVM"/>
+                <constraint firstItem="W0O-VS-6uq" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="V4H-sl-jAd"/>
                 <constraint firstItem="ICj-uo-WiR" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="byz-ob-pYK"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -71,6 +83,7 @@
         </view>
     </objects>
     <resources>
+        <image name="icon_menu" width="50" height="50"/>
         <image name="icon_search" width="50" height="50"/>
     </resources>
 </document>

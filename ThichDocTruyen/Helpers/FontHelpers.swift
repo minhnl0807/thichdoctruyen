@@ -24,6 +24,7 @@ struct FontSizes {
 }
 
 struct FontNames {
+    static let HelveticaNeueRegular = "HelveticaNeue"
     static let HelveticaNeueLight = "HelveticaNeue-Light"
     static let SFUIDisplayLight = "SanFranciscoDisplay-Light"
     static let HelveticaNeueItalic = "HelveticaNeue-Italic"

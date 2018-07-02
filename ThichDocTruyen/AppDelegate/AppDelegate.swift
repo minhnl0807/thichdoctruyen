@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         window = UIWindow.init(frame: UIScreen.main.bounds)
         
-        let mainVC = MainViewController.init(nibName: AppViewControllers.MAIN_VIEW_CONTROLLER, bundle: nil)
+        let mainVC = MainViewController.init(nibName: ViewControllers.MAIN_VIEW_CONTROLLER, bundle: nil)
         self.navigationController = UINavigationController(rootViewController: mainVC)
         self.navigationController.navigationBar.barTintColor = .white
         /*self.navigationController.navigationBar.isTranslucent = false
@@ -29,6 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.makeKeyAndVisible()
         
         DataManager.shared.navigationController = navigationController
+        DataManager.shared.mainViewController = mainVC
         
         return true
     }

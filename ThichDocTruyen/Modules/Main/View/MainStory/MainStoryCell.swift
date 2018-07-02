@@ -13,9 +13,10 @@ class MainStoryCell: UICollectionViewCell {
     @IBOutlet weak var imgStory: UIImageView!
     @IBOutlet weak var lblStory: UILabel!
 
-    func setupView(url: String, name: String) {
-        Utils.shared.setTextForView(view: lblStory, title: name, font: Fonts.FONT13_SF, color: .white)
-        Utils.shared.imageViewLoadImage(imgView: imgStory, linkImage: url)
+    func setupView(story: StoryModel) {
+        Utils.shared.setTextForView(view: lblStory, title: story.name, font: Fonts.FONT12_SF, color: .white)
+        Utils.shared.imageViewLoadImage(imgView: imgStory, linkImage: story.url!)
+        Utils.shared.setBorderColorForView(view: imgStory, borderWidth: 1, color: .white)
         self.backgroundColor = .clear
     }
 }

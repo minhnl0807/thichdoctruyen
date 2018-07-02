@@ -8,4 +8,14 @@
 
 "EnterKeyWord" = "Nhập từ khoá";
 "NewestUpdate" = "Cập nhật mới nhất";
-"WatchMore"    = "Xem thêm>>";
+"WatchMore"    = "Xem thêm";
+"Author"       = "Tác giả: ";
+"Views"        = "Lượt xem: ";
+"Cancel"       = "Huỷ bỏ";
+"Intro"        = "⚪ Giới thiệu";
+"Hide"         = "Ẩn bớt";
+"KindOf"       = "Thể loại";
+"Content"      = "⚪ Nội dung";
+"Chapter"      = "Tập";
+"SortNewest"       = "Sắp xếp mới nhất ⏬";
+"SortOldest"       = "Sắp xếp cũ nhất ⏫";

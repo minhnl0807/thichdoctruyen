@@ -6,4 +6,7 @@ target 'ThichDocTruyen' do
   pod 'R.swift'
   pod 'SDWebImage'
   pod 'SwiftyJSON'
+  pod 'SideMenu'
+  pod 'Alamofire'
+  pod 'AlamofireImage'
 end

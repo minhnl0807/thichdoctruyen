@@ -21,7 +21,7 @@ class MainHeaderView: UIView {
         Utils.shared.setConerRadiusForView(view: btnMore, num: 10)
         Utils.shared.setBorderColorForView(view: btnMore, borderWidth: 1, color: Color.BLUE_BTN)
         
-        UtilAnimates.shared.animateHigtlightImage(image: imgHeader)
+        //UtilAnimates.shared.animateHigtlightImage(image: imgHeader)
         
         let widthOfBtn = R.string.localizable.watchMore().width(withConstraintedHeight: btnMore.frame.size.height, font: Fonts.FONT13_SF) + 20
         widthOfBtnMore.constant = widthOfBtn
