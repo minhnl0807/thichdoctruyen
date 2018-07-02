@@ -17,8 +17,8 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Navigation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhX-MQ-KIo">
-                    <rect key="frame" x="139" y="14" width="97" height="16.5"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Navigation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhX-MQ-KIo">
+                    <rect key="frame" x="44" y="14" width="287" height="16.5"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -40,8 +40,10 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="hhX-MQ-KIo" secondAttribute="trailing" constant="44" id="4rV-G8-aXZ"/>
                 <constraint firstItem="hhX-MQ-KIo" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="CTt-8c-bCg"/>
                 <constraint firstItem="1i4-SA-U8B" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="Sd7-i5-kz4"/>
+                <constraint firstItem="hhX-MQ-KIo" firstAttribute="leading" secondItem="1i4-SA-U8B" secondAttribute="trailing" constant="8" id="nKY-pK-H5v"/>
                 <constraint firstItem="1i4-SA-U8B" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="qmm-2x-4NJ"/>
                 <constraint firstItem="hhX-MQ-KIo" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="yyh-To-Ger"/>
             </constraints>

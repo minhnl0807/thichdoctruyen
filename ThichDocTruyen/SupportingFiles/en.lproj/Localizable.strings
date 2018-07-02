@@ -12,5 +12,10 @@
 "Author"       = "Author: ";
 "Views"        = "Views: ";
 "Cancel"       = "Cancel";
-"Intro"        = "Intro";
+"Intro"        = "⚪ Intro";
 "Hide"         = "Hide";
+"KindOf"       = "Kind of";
+"Content"      = "⚪ Content";
+"Chapter"      = "Chapter";
+"SortNewest"       = "Sort by newest ⏬";
+"SortOldest"       = "Sort by oldest ⏫";

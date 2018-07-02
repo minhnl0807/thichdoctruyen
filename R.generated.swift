@@ -31,7 +31,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 16 images.
+  /// This `R.image` struct is generated, and contains static references to 17 images.
   struct image {
     /// Image `banner2`.
     static let banner2 = Rswift.ImageResource(bundle: R.hostingBundle, name: "banner2")
@@ -59,6 +59,8 @@ struct R: Rswift.Validatable {
     static let icon_newest = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_newest")
     /// Image `icon_rank`.
     static let icon_rank = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_rank")
+    /// Image `icon_right_arrow`.
+    static let icon_right_arrow = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_right_arrow")
     /// Image `icon_search`.
     static let icon_search = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_search")
     /// Image `splash2`.
@@ -131,6 +133,11 @@ struct R: Rswift.Validatable {
       return UIKit.UIImage(resource: R.image.icon_rank, compatibleWith: traitCollection)
     }
     
+    /// `UIImage(named: "icon_right_arrow", bundle: ..., traitCollection: ...)`
+    static func icon_right_arrow(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_right_arrow, compatibleWith: traitCollection)
+    }
+    
     /// `UIImage(named: "icon_search", bundle: ..., traitCollection: ...)`
     static func icon_search(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.icon_search, compatibleWith: traitCollection)
@@ -149,12 +156,20 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 17 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 21 nibs.
   struct nib {
     /// Nib `BaseNavigationView`.
     static let baseNavigationView = _R.nib._BaseNavigationView()
     /// Nib `CategoryStoryCell`.
     static let categoryStoryCell = _R.nib._CategoryStoryCell()
+    /// Nib `ChapterCell`.
+    static let chapterCell = _R.nib._ChapterCell()
+    /// Nib `ChapterStoryView`.
+    static let chapterStoryView = _R.nib._ChapterStoryView()
+    /// Nib `DetailChapterCell`.
+    static let detailChapterCell = _R.nib._DetailChapterCell()
+    /// Nib `DetailChapterViewController`.
+    static let detailChapterViewController = _R.nib._DetailChapterViewController()
     /// Nib `DetailStoryViewController`.
     static let detailStoryViewController = _R.nib._DetailStoryViewController()
     /// Nib `HeaderStoryView`.
@@ -194,6 +209,26 @@ struct R: Rswift.Validatable {
     /// `UINib(name: "CategoryStoryCell", in: bundle)`
     static func categoryStoryCell(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.categoryStoryCell)
+    }
+    
+    /// `UINib(name: "ChapterCell", in: bundle)`
+    static func chapterCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.chapterCell)
+    }
+    
+    /// `UINib(name: "ChapterStoryView", in: bundle)`
+    static func chapterStoryView(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.chapterStoryView)
+    }
+    
+    /// `UINib(name: "DetailChapterCell", in: bundle)`
+    static func detailChapterCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.detailChapterCell)
+    }
+    
+    /// `UINib(name: "DetailChapterViewController", in: bundle)`
+    static func detailChapterViewController(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.detailChapterViewController)
     }
     
     /// `UINib(name: "DetailStoryViewController", in: bundle)`
@@ -299,7 +334,7 @@ struct R: Rswift.Validatable {
   
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 8 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 13 localization keys.
     struct localizable {
       /// en translation: Author: 
       /// 
@@ -309,6 +344,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, vi
       static let cancel = Rswift.StringResource(key: "Cancel", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "vi"], comment: nil)
+      /// en translation: Chapter
+      /// 
+      /// Locales: en, vi
+      static let chapter = Rswift.StringResource(key: "Chapter", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "vi"], comment: nil)
       /// en translation: Enter key word
       /// 
       /// Locales: en, vi
@@ -317,14 +356,22 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, vi
       static let hide = Rswift.StringResource(key: "Hide", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "vi"], comment: nil)
-      /// en translation: Intro
+      /// en translation: Kind of
       /// 
       /// Locales: en, vi
-      static let intro = Rswift.StringResource(key: "Intro", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "vi"], comment: nil)
+      static let kindOf = Rswift.StringResource(key: "KindOf", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "vi"], comment: nil)
       /// en translation: Newest Update
       /// 
       /// Locales: en, vi
       static let newestUpdate = Rswift.StringResource(key: "NewestUpdate", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "vi"], comment: nil)
+      /// en translation: Sort by newest ⏬
+      /// 
+      /// Locales: en, vi
+      static let sortNewest = Rswift.StringResource(key: "SortNewest", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "vi"], comment: nil)
+      /// en translation: Sort by oldest ⏫
+      /// 
+      /// Locales: en, vi
+      static let sortOldest = Rswift.StringResource(key: "SortOldest", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "vi"], comment: nil)
       /// en translation: Views: 
       /// 
       /// Locales: en, vi
@@ -333,6 +380,14 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, vi
       static let watchMore = Rswift.StringResource(key: "WatchMore", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "vi"], comment: nil)
+      /// en translation: ⚪ Content
+      /// 
+      /// Locales: en, vi
+      static let content = Rswift.StringResource(key: "Content", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "vi"], comment: nil)
+      /// en translation: ⚪ Intro
+      /// 
+      /// Locales: en, vi
+      static let intro = Rswift.StringResource(key: "Intro", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "vi"], comment: nil)
       
       /// en translation: Author: 
       /// 
@@ -346,6 +401,13 @@ struct R: Rswift.Validatable {
       /// Locales: en, vi
       static func cancel(_: Void = ()) -> String {
         return NSLocalizedString("Cancel", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Chapter
+      /// 
+      /// Locales: en, vi
+      static func chapter(_: Void = ()) -> String {
+        return NSLocalizedString("Chapter", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Enter key word
@@ -362,11 +424,11 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("Hide", bundle: R.hostingBundle, comment: "")
       }
       
-      /// en translation: Intro
+      /// en translation: Kind of
       /// 
       /// Locales: en, vi
-      static func intro(_: Void = ()) -> String {
-        return NSLocalizedString("Intro", bundle: R.hostingBundle, comment: "")
+      static func kindOf(_: Void = ()) -> String {
+        return NSLocalizedString("KindOf", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Newest Update
@@ -374,6 +436,20 @@ struct R: Rswift.Validatable {
       /// Locales: en, vi
       static func newestUpdate(_: Void = ()) -> String {
         return NSLocalizedString("NewestUpdate", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Sort by newest ⏬
+      /// 
+      /// Locales: en, vi
+      static func sortNewest(_: Void = ()) -> String {
+        return NSLocalizedString("SortNewest", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Sort by oldest ⏫
+      /// 
+      /// Locales: en, vi
+      static func sortOldest(_: Void = ()) -> String {
+        return NSLocalizedString("SortOldest", bundle: R.hostingBundle, comment: "")
       }
       
       /// en translation: Views: 
@@ -388,6 +464,20 @@ struct R: Rswift.Validatable {
       /// Locales: en, vi
       static func watchMore(_: Void = ()) -> String {
         return NSLocalizedString("WatchMore", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: ⚪ Content
+      /// 
+      /// Locales: en, vi
+      static func content(_: Void = ()) -> String {
+        return NSLocalizedString("Content", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: ⚪ Intro
+      /// 
+      /// Locales: en, vi
+      static func intro(_: Void = ()) -> String {
+        return NSLocalizedString("Intro", bundle: R.hostingBundle, comment: "")
       }
       
       fileprivate init() {}
@@ -416,6 +506,7 @@ struct _R: Rswift.Validatable {
   
   struct nib: Rswift.Validatable {
     static func validate() throws {
+      try _ChapterCell.validate()
       try _BaseNavigationView.validate()
       try _MainNavigationView.validate()
       try _MainViewController.validate()
@@ -444,6 +535,54 @@ struct _R: Rswift.Validatable {
       
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> CategoryStoryCell? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? CategoryStoryCell
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _ChapterCell: Rswift.NibResourceType, Rswift.Validatable {
+      let bundle = R.hostingBundle
+      let name = "ChapterCell"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> ChapterCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? ChapterCell
+      }
+      
+      static func validate() throws {
+        if UIKit.UIImage(named: "icon_right_arrow", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_right_arrow' is used in nib 'ChapterCell', but couldn't be loaded.") }
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _ChapterStoryView: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "ChapterStoryView"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> ChapterStoryView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? ChapterStoryView
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _DetailChapterCell: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "DetailChapterCell"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> DetailChapterCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? DetailChapterCell
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _DetailChapterViewController: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "DetailChapterViewController"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> UIKit.UIView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
       }
       
       fileprivate init() {}

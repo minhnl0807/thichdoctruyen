@@ -79,4 +79,17 @@ class UtilAnimates {
             viewController.dismiss(animated: false, completion: nil)
         }
     }
+    
+    func animateSelectChapter(cell: UIView, completion: @escaping () -> ()) {
+        cell.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+        cell.backgroundColor = UIColor.lightGray
+        cell.alpha = 0.5
+        UIView.animate(withDuration: 0.1, animations: {
+            cell.alpha = 1
+            cell.transform = CGAffineTransform.identity
+            cell.backgroundColor = .clear
+        }) { (_) in
+            completion()
+        }
+    }
 }

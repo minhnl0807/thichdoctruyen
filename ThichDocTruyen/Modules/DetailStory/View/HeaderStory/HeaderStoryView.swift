@@ -19,19 +19,24 @@ class HeaderStoryView: UIView {
     @IBOutlet weak var categoryView: UIView!
     @IBOutlet weak var cltCategory: UICollectionView!
     @IBOutlet weak var lblViewCount: UILabel!
+    @IBOutlet weak var lblKindOf: UILabel!
+    var story: StoryModel!
     
-    func setupView(imageView: UIImageView, storyName: String, author: String, viewCount: Int) {
+    func setupView(imageView: UIImageView, story: StoryModel) {
+        self.story = story
         imgStory.image = imageView.image
         widthOfImgStory.constant = imageView.frame.size.width
         heightOfImgStory.constant = imageView.frame.size.height
         Utils.shared.setBorderColorForView(view: imgStory, borderWidth: 1, color: .white)
         
-        Utils.shared.setTextForView(view: lblStoryName, title: storyName, font: Fonts.FONT16_SF_BOLD, color: .white)
+        Utils.shared.setTextForView(view: lblStoryName, title: story.name, font: Fonts.FONT16_SF_BOLD, color: .white)
         heightOfLblStrName.constant = (lblStoryName.text?.height(withConstrainedWidth: lblStoryName.frame.size.width, font: Fonts.FONT16_SF_BOLD))!
         
-        Utils.shared.setTextForView(view: lblAuthor, title: R.string.localizable.author() + author, font: Fonts.FONT14_SF_ITALIC, color: .white)
+        Utils.shared.setTextForView(view: lblAuthor, title: R.string.localizable.author() + story.author!, font: Fonts.FONT14_SF_ITALIC, color: .white)
         
-        Utils.shared.setTextForView(view: lblViewCount, title: R.string.localizable.views() + String(viewCount), font: Fonts.FONT13_SF, color: .white)
+        Utils.shared.setTextForView(view: lblViewCount, title: R.string.localizable.views() + String(story.viewCount!), font: Fonts.FONT13_SF, color: .white)
+        
+        Utils.shared.setTextForView(view: lblKindOf, title: R.string.localizable.kindOf(), font: Fonts.FONT12_SF_ITALIC, color: .white)
         
         cltCategory.delegate = self
         cltCategory.dataSource = self
@@ -47,16 +52,16 @@ extension HeaderStoryView: UICollectionViewDelegate, UICollectionViewDataSource,
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return categoriesDemo.count
+        return (story.categories?.count)!
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = cltCategory.dequeueReusableCell(withReuseIdentifier: Cells.CATEGORY_STORY, for: indexPath) as! CategoryStoryCell
-        cell.setupView(text: categoriesDemo[indexPath.item])
+        cell.setupView(text: story.categories![indexPath.item])
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: categoriesDemo[indexPath.item].width(withConstraintedHeight: 20, font: Fonts.FONT12_SF) + 15, height: 20)
+        return CGSize(width: story.categories![indexPath.item].width(withConstraintedHeight: 24, font: Fonts.FONT12_SF) + 10, height: 24)
     }
 }

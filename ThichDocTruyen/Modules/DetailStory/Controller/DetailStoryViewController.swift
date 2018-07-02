@@ -16,9 +16,13 @@ class DetailStoryViewController: BaseViewController {
     var imageView: UIImageView!
     var headerStory: HeaderStoryView!
     var introStory: IntroStoryView!
+    var chapterStory: ChapterStoryView!
     var window: UIWindow!
     var story: StoryModel!
     var isClickedMore: Bool = false
+    var isClickedSort: Bool = false
+    var lastContentOffset: CGFloat = 0
+    var isload: Bool = false
     
     override func navigationBarView() -> UIView? {
         return navigationView
@@ -29,6 +33,7 @@ class DetailStoryViewController: BaseViewController {
     }
     
     override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
         if isFirstSetupBGImg {
             setupBackgroundImage()
             isFirstSetupBGImg = false
@@ -65,13 +70,26 @@ class DetailStoryViewController: BaseViewController {
         tbStory.delaysContentTouches = false
         
         headerStory = Bundle.main.loadNibNamed(Views.HEADER_STORY, owner: self, options: nil)?.first as! HeaderStoryView
-        headerStory.setupView(imageView: self.imageView, storyName: story.name!, author: story.author!, viewCount: story.viewCount!)
+        headerStory.setupView(imageView: self.imageView, story: self.story)
+        
         introStory = Bundle.main.loadNibNamed(Views.INTRO_STORY, owner: self, options: nil)?.first as! IntroStoryView
         introStory.closureMoreClick = {
             self.isClickedMore = !self.isClickedMore
-            self.tbStory.reloadSections(IndexSet(integersIn: 1...1), with: self.isClickedMore ? .left : .right)
+            self.tbStory.reloadSections(IndexSet(integersIn: 1...1), with: .automatic)
         }
         introStory.setupView(intro: story.intro!)
+        
+        chapterStory = Bundle.main.loadNibNamed(Views.CHAPTER_STORY, owner: self, options: nil)?.first as! ChapterStoryView
+        chapterStory.closureClickedSort = {
+            self.isClickedSort = !self.isClickedSort
+        }
+        chapterStory.closureClickedChapter = {
+            let detailChapterVC = DetailChapterViewController.init(nibName: ViewControllers.DETAIL_CHAPTER_VIEW_CONTROLLER, bundle: nil)
+            detailChapterVC.story = self.story
+            //DataManager.shared.navigationController.present(detailChapterVC, animated: false, completion: nil)
+            self.present(detailChapterVC, animated: false, completion: nil)
+        }
+        chapterStory.setupView()
         
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
@@ -97,7 +115,7 @@ class DetailStoryViewController: BaseViewController {
 
 extension DetailStoryViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 3
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -114,6 +132,8 @@ extension DetailStoryViewController: UITableViewDelegate, UITableViewDataSource 
             return headerStory
         case 1:
             return introStory
+        case 2:
+            return chapterStory
         default:
             return UIView()
         }
@@ -131,8 +151,45 @@ extension DetailStoryViewController: UITableViewDelegate, UITableViewDataSource 
             }
             introStory.btnMore.isHidden = isClickedMore ? false : true
             return story.intro!.height(withConstrainedWidth: introStory.lblContent.frame.size.width, font: Fonts.FONT13_SF) + 50
+        case 2:
+            return 20 * 44 + 20 * 2 + 32
         default:
             return 0
         }
+    }
+}
+
+extension DetailStoryViewController: UIScrollViewDelegate {
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+//        let currentOffset = scrollView.contentOffset.y
+//        let maximumOffset = scrollView.contentSize.height - scrollView.frame.size.height
+//        // Change 10.0 to adjust the distance from bottom
+//        if maximumOffset - currentOffset <= 50.0 {
+//            print("load more")
+//        }
+    }
+    
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        self.lastContentOffset = scrollView.contentOffset.y
+    }
+
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let currentOffset = scrollView.contentOffset.y
+        let maximumOffset = scrollView.contentSize.height - scrollView.frame.size.height
+        // Change 10.0 to adjust the distance from bottom
+        if maximumOffset - currentOffset <= 50.0 {
+            if !isload {
+                isload = true
+                print("load more")
+            }
+        }
+//        if (self.lastContentOffset < scrollView.contentOffset.y) {
+//            print("Up")
+//        } else if (self.lastContentOffset > scrollView.contentOffset.y) {
+//            print("Down")
+//        } else {
+//            // didn't move
+//        }
     }
 }

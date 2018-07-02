@@ -111,7 +111,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         switch section {
         case 0:
-            return Constants.WIDTH_OF_SCREEN / 5.4
+            return Constants.WIDTH_OF_SCREEN / 5
         case 1:
             return Constants.HEIGHT_OF_SCREEN * 0.12
         case 2:
