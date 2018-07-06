@@ -25,4 +25,5 @@ struct Cells {
     static let SPLASH              = "SplashCell"
     static let CHAPTER_CELL        = "ChapterCell"
     static let DETAIL_CHAPTER_CELL = "DetailChapterCell"
+    static let MORE_STORIES_CELL   = "MoreStoriesCell"
 }

@@ -92,4 +92,13 @@ class UtilAnimates {
             completion()
         }
     }
+    
+    func animateSelectCategory(view: UIView, point: CGPoint, text: String, completion: @escaping () -> ()) {
+        UIView.animate(withDuration: 0.2, animations: {
+            view.frame.origin = point
+            view.frame.size = CGSize(width: text.width(withConstraintedHeight: 44, font: Fonts.FONT15_SF_BOLD) + 15, height: 44)
+        }) { (_) in
+            completion()
+        }
+    }
 }

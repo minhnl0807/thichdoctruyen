@@ -156,10 +156,12 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 21 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 24 nibs.
   struct nib {
     /// Nib `BaseNavigationView`.
     static let baseNavigationView = _R.nib._BaseNavigationView()
+    /// Nib `CategoriesViewController`.
+    static let categoriesViewController = _R.nib._CategoriesViewController()
     /// Nib `CategoryStoryCell`.
     static let categoryStoryCell = _R.nib._CategoryStoryCell()
     /// Nib `ChapterCell`.
@@ -196,6 +198,10 @@ struct R: Rswift.Validatable {
     static let mainTabbarView = _R.nib._MainTabbarView()
     /// Nib `MainViewController`.
     static let mainViewController = _R.nib._MainViewController()
+    /// Nib `MoreStoriesCell`.
+    static let moreStoriesCell = _R.nib._MoreStoriesCell()
+    /// Nib `MoreStoriesViewController`.
+    static let moreStoriesViewController = _R.nib._MoreStoriesViewController()
     /// Nib `SplashCell`.
     static let splashCell = _R.nib._SplashCell()
     /// Nib `SplashViewController`.
@@ -204,6 +210,11 @@ struct R: Rswift.Validatable {
     /// `UINib(name: "BaseNavigationView", in: bundle)`
     static func baseNavigationView(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.baseNavigationView)
+    }
+    
+    /// `UINib(name: "CategoriesViewController", in: bundle)`
+    static func categoriesViewController(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.categoriesViewController)
     }
     
     /// `UINib(name: "CategoryStoryCell", in: bundle)`
@@ -294,6 +305,16 @@ struct R: Rswift.Validatable {
     /// `UINib(name: "MainViewController", in: bundle)`
     static func mainViewController(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.mainViewController)
+    }
+    
+    /// `UINib(name: "MoreStoriesCell", in: bundle)`
+    static func moreStoriesCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.moreStoriesCell)
+    }
+    
+    /// `UINib(name: "MoreStoriesViewController", in: bundle)`
+    static func moreStoriesViewController(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.moreStoriesViewController)
     }
     
     /// `UINib(name: "SplashCell", in: bundle)`
@@ -529,6 +550,17 @@ struct _R: Rswift.Validatable {
       fileprivate init() {}
     }
     
+    struct _CategoriesViewController: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "CategoriesViewController"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> UIKit.UIView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+      }
+      
+      fileprivate init() {}
+    }
+    
     struct _CategoryStoryCell: Rswift.NibResourceType {
       let bundle = R.hostingBundle
       let name = "CategoryStoryCell"
@@ -745,6 +777,28 @@ struct _R: Rswift.Validatable {
       
       static func validate() throws {
         if UIKit.UIImage(named: "bg_left", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'bg_left' is used in nib 'MainViewController', but couldn't be loaded.") }
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _MoreStoriesCell: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "MoreStoriesCell"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> MoreStoriesCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? MoreStoriesCell
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _MoreStoriesViewController: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "MoreStoriesViewController"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> UIKit.UIView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
       }
       
       fileprivate init() {}

@@ -9,6 +9,8 @@
 import UIKit
 import Alamofire
 import AlamofireImage
+import ARSLineProgress
+import Kingfisher
 
 class DetailChapterViewController: BaseViewController {
 
@@ -77,6 +79,7 @@ class DetailChapterViewController: BaseViewController {
     var isAllowLoadMore: Bool = true
     var isFirstLoadLastCell: Bool = true
     var contentOffSet: CGPoint = CGPoint(x: 0, y: 0)
+    var indexPath: IndexPath = IndexPath(row: 0, section: 0)
     
     override func navigationBarView() -> UIView? {
         return navigationView
@@ -115,6 +118,7 @@ class DetailChapterViewController: BaseViewController {
         tbChapter.backgroundColor = .clear
         
         self.view.backgroundColor = .clear
+        ARSLineProgress.show()
         //apiLoadChapter()
     }
     
@@ -141,23 +145,28 @@ class DetailChapterViewController: BaseViewController {
             tbChapter.reloadData()
             tbChapter.layoutIfNeeded()
             tbChapter.setContentOffset(contentOffSet, animated: false)
+            ARSLineProgress.showSuccess()
             return
         }
         
         if numberIndexLoaded > (maximumImagesLoad * timesLoadMore) - 1 {
-            //print("Reload table and allow loading more...")
+            print("Reload table and allow loading more...")
             isAllowLoadMore = true
-            let contentOffSet = tbChapter.contentOffset
             isFirstLoadLastCell = true
+            
+            let oldContentOffSet = self.contentOffSet
             tbChapter.reloadData()
             tbChapter.layoutIfNeeded()
-            tbChapter.setContentOffset(contentOffSet, animated: false)
+            tbChapter.layer.removeAllAnimations()
+            tbChapter.setContentOffset(oldContentOffSet, animated: true)
+            ARSLineProgress.hide()
             return
         }
         
         Alamofire.request(listUrls[numberIndexLoaded], method: .get).responseImage { response in
             guard let image = response.result.value else {
                 // Handle error
+                ARSLineProgress.showFail()
                 return
             }
             self.listImages.append(image)
@@ -198,50 +207,58 @@ extension DetailChapterViewController: UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if indexPath.row == tbChapter.numberOfRows(inSection: 0) - 1 && !isFirstLoadLastCell && isAllowLoadMore {
+        //self.indexPath = indexPath
+        /*if indexPath.row == tbChapter.numberOfRows(inSection: 0) - 1 && !isFirstLoadLastCell && isAllowLoadMore {
             print("LOADINGGGGGGGGGG MORE")
             timesLoadMore = timesLoadMore + 1
             isAllowLoadMore = false
             setupData()
-        } else if indexPath.row == tbChapter.numberOfRows(inSection: 0) - 1 && isFirstLoadLastCell {
+        } else if indexPath.row == tbChapter.numberOfRows(inSection: 0) - 1 && isFirstLoadLastCell && isAllowLoadMore {
             print("Frist load last cell")
             isFirstLoadLastCell = false
-        }
+        }*/
+    }
+    
+    func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
     }
 }
 
 extension DetailChapterViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        self.contentOffSet = scrollView.contentOffset
 //        let currentOffset = scrollView.contentOffset.y
 //        let maximumOffset = scrollView.contentSize.height - scrollView.frame.size.height
-//        //print(maximumOffset - currentOffset)
-//        if (maximumOffset - currentOffset) < 1 && (maximumOffset - currentOffset) > -1 {
-//            if isAllowLoadMore {
+//        print(maximumOffset - currentOffset)
+//        if (maximumOffset - currentOffset) < 200.0 && (maximumOffset - currentOffset) > 0.0 {
+//            if isAllowLoadMore && currentOffset > 0.0 {
 //                print("Load more started...")
 //                isAllowLoadMore = false
-//                tbChapter.isScrollEnabled = false
 //                timesLoadMore = timesLoadMore + 1
 //                self.setupData()
 //            } else {
 //                print("Loading...")
+//                return
 //            }
 //        }
+        scrollView.layoutIfNeeded()
         self.contentOffSet = scrollView.contentOffset
     }
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-//        let currentOffset = scrollView.contentOffset.y
-//        let maximumOffset = scrollView.contentSize.height - scrollView.frame.size.height
-//        //print(maximumOffset - currentOffset)
-//        if (maximumOffset - currentOffset) < 10.0 {
-//            if isAllowLoadMore {
-//                print("Load more started...")
-//                isAllowLoadMore = false
-//                timesLoadMore = timesLoadMore + 1
-//                self.setupData()
-//            } else {
-//                print("Loading...")
-//            }
-//        }
+        let currentOffset = scrollView.contentOffset.y
+        let maximumOffset = scrollView.contentSize.height - scrollView.frame.size.height
+        //print(maximumOffset - currentOffset)
+        if (maximumOffset - currentOffset) < 50.0 {
+            if isAllowLoadMore {
+                ARSLineProgress.show()
+                print("Load more started...")
+                isAllowLoadMore = false
+                timesLoadMore = timesLoadMore + 1
+                self.setupData()
+            } else {
+                print("Loading...")
+            }
+        }
     }
 }

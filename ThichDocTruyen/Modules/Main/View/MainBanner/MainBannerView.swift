@@ -18,6 +18,7 @@ class MainBannerView: UIView {
         cltBanner.delegate = self
         cltBanner.dataSource = self
         cltBanner.register(UINib(nibName: Cells.SPLASH, bundle: nil), forCellWithReuseIdentifier: Cells.SPLASH)
+        Utils.shared.setConerRadiusForView(view: cltBanner, num: 5)
         
         pageControl.numberOfPages = bannerImages.count
         

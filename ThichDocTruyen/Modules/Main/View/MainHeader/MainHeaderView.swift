@@ -14,6 +14,7 @@ class MainHeaderView: UIView {
     @IBOutlet weak var lblTItle: UILabel!
     @IBOutlet weak var btnMore: UIButton!
     @IBOutlet weak var widthOfBtnMore: NSLayoutConstraint!
+    var closureMoreClick: (() -> ())!
     
     func setupView() {
         Utils.shared.setTextForView(view: lblTItle, title: R.string.localizable.newestUpdate(), font: Fonts.FONT16_SF, color: Color.GREEN_TEXT)
@@ -27,5 +28,9 @@ class MainHeaderView: UIView {
         widthOfBtnMore.constant = widthOfBtn
         
         self.backgroundColor = .clear
+    }
+    
+    @IBAction func moreClick(_ sender: Any) {
+        closureMoreClick()
     }
 }

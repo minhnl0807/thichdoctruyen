@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="172" id="KGk-i7-Jjw" customClass="MoreStoriesCell" customModule="ThichDocTruyen" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="119.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view alpha="0.10000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ltA-YB-hKi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="111.5"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Thể loại" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IKB-0B-Nda">
+                        <rect key="frame" x="10" y="10" width="229.5" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oxb-fm-Plp">
+                        <rect key="frame" x="8" y="8" width="66.5" height="92.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="oxb-fm-Plp" secondAttribute="height" multiplier="1:1.4" id="3fy-FB-drT"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8md-Eq-xaW">
+                        <rect key="frame" x="0.0" y="111.5" width="320" height="8"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="8" id="dEe-gb-I4M"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Những cuộc phiêu lưu của SwiftNhững cuộc phiêu lưu của Swift" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9P2-WM-psG">
+                        <rect key="frame" x="82" y="8" width="230" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="q7a-gB-0p0"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thể loại" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k3X-VW-3Us">
+                        <rect key="frame" x="82.5" y="34" width="229.5" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tác giả:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NfO-uF-fKK">
+                        <rect key="frame" x="82.5" y="59" width="229.5" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="9P2-WM-psG" secondAttribute="trailing" constant="8" id="7Rm-Fm-lhi"/>
+                    <constraint firstItem="oxb-fm-Plp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="Fk6-Ze-FeY"/>
+                    <constraint firstItem="NfO-uF-fKK" firstAttribute="top" secondItem="k3X-VW-3Us" secondAttribute="bottom" constant="8" id="I5g-3C-CsI"/>
+                    <constraint firstItem="ltA-YB-hKi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="M63-I0-ig6"/>
+                    <constraint firstAttribute="trailing" secondItem="k3X-VW-3Us" secondAttribute="trailing" constant="8" id="PN4-vs-3eg"/>
+                    <constraint firstItem="9P2-WM-psG" firstAttribute="top" secondItem="oxb-fm-Plp" secondAttribute="top" id="T37-K3-CAU"/>
+                    <constraint firstItem="k3X-VW-3Us" firstAttribute="leading" secondItem="oxb-fm-Plp" secondAttribute="trailing" constant="8" id="Vrt-4i-bj7"/>
+                    <constraint firstItem="oxb-fm-Plp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="a9A-Sj-GbK"/>
+                    <constraint firstItem="9P2-WM-psG" firstAttribute="leading" secondItem="oxb-fm-Plp" secondAttribute="trailing" constant="8" id="ePZ-1p-7M9"/>
+                    <constraint firstAttribute="bottom" secondItem="8md-Eq-xaW" secondAttribute="bottom" id="hBE-9j-rR1"/>
+                    <constraint firstItem="8md-Eq-xaW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="jT0-Ub-jCd"/>
+                    <constraint firstAttribute="trailing" secondItem="ltA-YB-hKi" secondAttribute="trailing" id="kci-7r-xEe"/>
+                    <constraint firstAttribute="trailing" secondItem="NfO-uF-fKK" secondAttribute="trailing" constant="8" id="nHc-Gt-4LP"/>
+                    <constraint firstItem="NfO-uF-fKK" firstAttribute="leading" secondItem="oxb-fm-Plp" secondAttribute="trailing" constant="8" id="rfB-gw-18M"/>
+                    <constraint firstItem="ltA-YB-hKi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="sBE-dY-2ea"/>
+                    <constraint firstAttribute="trailing" secondItem="8md-Eq-xaW" secondAttribute="trailing" id="urc-dC-ge5"/>
+                    <constraint firstAttribute="bottom" secondItem="ltA-YB-hKi" secondAttribute="bottom" constant="8" id="v9F-lu-sMi"/>
+                    <constraint firstItem="k3X-VW-3Us" firstAttribute="top" secondItem="9P2-WM-psG" secondAttribute="bottom" constant="8" id="wRm-UM-d2l"/>
+                </constraints>
+            </tableViewCellContentView>
+            <constraints>
+                <constraint firstItem="oxb-fm-Plp" firstAttribute="height" secondItem="KGk-i7-Jjw" secondAttribute="height" multiplier="1/1.3" id="uW6-d2-CLi"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="heightOfLblStrName" destination="q7a-gB-0p0" id="xhS-7V-YE9"/>
+                <outlet property="imgStory" destination="oxb-fm-Plp" id="6Kf-aD-QpJ"/>
+                <outlet property="lblAuthor" destination="NfO-uF-fKK" id="zs9-yB-iGt"/>
+                <outlet property="lblCategory" destination="k3X-VW-3Us" id="W1f-bB-AtB"/>
+                <outlet property="lblStoryName" destination="9P2-WM-psG" id="t9W-Lu-eVd"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="42"/>
+        </tableViewCell>
+    </objects>
+</document>

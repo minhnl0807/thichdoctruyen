@@ -37,7 +37,7 @@ class LeftMenuViewController: BaseViewController {
         let blurEffect = UIBlurEffect(style: .dark)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = self.view.frame
-        blurEffectView.alpha = 0.8
+        blurEffectView.alpha = 1
         imageView.addSubview(blurEffectView)
     }
 }

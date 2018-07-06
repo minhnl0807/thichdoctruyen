@@ -12,6 +12,7 @@ class DataManager: NSObject {
     static let shared = DataManager()
     var navigationController: UINavigationController!
     var mainViewController: MainViewController!
+    var baseSizeStoryImage = CGSize(width: (Constants.WIDTH_OF_SCREEN / 4.2) - 4, height: ((Constants.WIDTH_OF_SCREEN / 4.2) * 2) / 1.4)
     
     func isFirstTime() -> Bool {
         if let isFirst = UserDefaults.standard.object(forKey: KEY_USER_DEFAULT.FIRST_TIME) {

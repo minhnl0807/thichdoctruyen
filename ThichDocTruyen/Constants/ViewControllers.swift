@@ -13,4 +13,6 @@ struct ViewControllers {
     static let HOME_VIEW_CONTROLLER           = "HomeViewController"
     static let SPLASH_VIEW_CONTROLLER         = "SplashViewController"
     static let DETAIL_CHAPTER_VIEW_CONTROLLER = "DetailChapterViewController"
+    static let MORE_STORIES_VIEW_CONTROLLER   = "MoreStoriesViewController"
+    static let CATEGORIES_VIEW_CONTROLLER     = "CategoriesViewController"
 }

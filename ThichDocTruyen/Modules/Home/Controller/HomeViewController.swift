@@ -44,6 +44,20 @@ class HomeViewController: UIViewController {
         headerView3.setupView()
         mainStory3 = Bundle.main.loadNibNamed(Views.MAIN_STORY, owner: self, options: nil)?.first as! MainStoryView
         
+        functionView.closureCategoriesClick = {
+            let categoriesViewController = CategoriesViewController.init(nibName: ViewControllers.CATEGORIES_VIEW_CONTROLLER, bundle: nil)
+            DataManager.shared.navigationController.present(categoriesViewController, animated: false, completion: nil)
+        }
+        headerView.closureMoreClick = {
+            self.pushToMoreStoryVC()
+        }
+        headerView2.closureMoreClick = {
+            self.pushToMoreStoryVC()
+        }
+        headerView3.closureMoreClick = {
+            self.pushToMoreStoryVC()
+        }
+        
         tbHome.delegate = self
         tbHome.dataSource = self
         tbHome.separatorColor = .clear
@@ -61,7 +75,12 @@ class HomeViewController: UIViewController {
         mainStory3.setupView(listStories: self.listStories3)
     }
     
-    // hashcode list story
+    func pushToMoreStoryVC() {
+        let moreStoryViewController = MoreStoriesViewController.init(nibName: ViewControllers.MORE_STORIES_VIEW_CONTROLLER, bundle: nil)
+        DataManager.shared.navigationController.present(moreStoryViewController, animated: false, completion: nil)
+    }
+    
+    // hashcode list stories
     func hashcode() {
         for i in 0 ... nameDemo.count - 1 {
             let story = StoryModel.init(name: nameDemo[i], author: authorDemo[i], viewCount: 2580, intro: introDemo[i], url: urlImageDemo[i], categories: categoriesDemo)
@@ -111,7 +130,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         switch section {
         case 0:
-            return Constants.WIDTH_OF_SCREEN / 5
+            return (Constants.WIDTH_OF_SCREEN - 10) / 5
         case 1:
             return Constants.HEIGHT_OF_SCREEN * 0.12
         case 2:
