@@ -12,8 +12,10 @@ class CategoriesViewController: BaseViewController {
 
     @IBOutlet weak var navigationView: UIView!
     @IBOutlet weak var cltCategories: UICollectionView!
+    @IBOutlet weak var cltStories: UICollectionView!
     var isFirstSetupBGImg: Bool = true
     var preIndexPathSelected: IndexPath!
+    var isFirstLoadCategory: Bool = false
     
     override func navigationBarView() -> UIView? {
         return navigationView
@@ -47,14 +49,19 @@ class CategoriesViewController: BaseViewController {
         cltCategories.delegate = self
         cltCategories.dataSource = self
         cltCategories.backgroundColor = .clear
-        cltCategories.register(UINib(nibName: Cells.CATEGORY_STORY, bundle: nil), forCellWithReuseIdentifier: Cells.CATEGORY_STORY)
+        cltCategories.register(UINib(nibName: Cells.CATEGORY, bundle: nil), forCellWithReuseIdentifier: Cells.CATEGORY)
+        
+        cltStories.delegate = self
+        cltStories.dataSource = self
+        cltStories.backgroundColor = .clear
+        cltStories.register(UINib(nibName: Cells.LIST_STORIES_CELL, bundle: nil), forCellWithReuseIdentifier: Cells.LIST_STORIES_CELL)
     }
     
     func setupBackgroundImage() {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
         imageView.frame = self.view.frame
-        imageView.image = #imageLiteral(resourceName: "splash")
+        imageView.image = #imageLiteral(resourceName: "splash2")
         imageView.clipsToBounds = true
         self.view.addSubview(imageView)
         
@@ -77,30 +84,74 @@ extension CategoriesViewController: UICollectionViewDelegate, UICollectionViewDa
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = cltCategories.dequeueReusableCell(withReuseIdentifier: Cells.CATEGORY_STORY, for: indexPath) as! CategoryStoryCell
-        Utils.shared.setTextForView(view: cell.lblCategory, title: categoriesDemo[indexPath.item], font: Fonts.FONT15_SF_BOLD, color: .white)
-        cell.backgroundColor = .clear
-        cell.alpha = 1
-        return cell
+        switch collectionView {
+        case cltCategories:
+            let cell = cltCategories.dequeueReusableCell(withReuseIdentifier: Cells.CATEGORY, for: indexPath) as! CategoryCell
+            cell.setupView(title: categoriesDemo[indexPath.item])
+            if indexPath.item == 0 && !isFirstLoadCategory {
+                cell.setupViewSelect()
+                isFirstLoadCategory = true
+                preIndexPathSelected = indexPath
+            }
+            return cell
+        case cltStories:
+            let cell = cltStories.dequeueReusableCell(withReuseIdentifier: Cells.LIST_STORIES_CELL, for: indexPath) as! ListStoriesCell
+            cell.setupView()
+            return cell
+        default:
+            return UICollectionViewCell()
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: categoriesDemo[indexPath.item].width(withConstraintedHeight: 44, font: Fonts.FONT15_SF_BOLD) + 15, height: 44)
+        switch collectionView {
+        case cltCategories:
+            return CGSize(width: categoriesDemo[indexPath.item].width(withConstraintedHeight: 44, font: Fonts.FONT15_SF) + 15, height: 44)
+        case cltStories:
+            return cltStories.frame.size
+        default:
+            return CGSize(width: 0, height: 0)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        switch collectionView {
+        case cltCategories:
+            if preIndexPathSelected == nil {
+                preIndexPathSelected = indexPath
+            } else {
+                if let cell = cltCategories.cellForItem(at: preIndexPathSelected) as? CategoryCell {
+                    cell.setupViewNormal()
+                }
+            }
+            
+            if let cell = cltCategories.cellForItem(at: indexPath) as? CategoryCell {
+                cltStories.scrollToItem(at: indexPath, at: .left, animated: true)
+                cell.setupViewSelect()
+                preIndexPathSelected = indexPath
+            }
+        case cltStories:
+            break
+        default:
+            break
+        }
+    }
+    
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        let index = targetContentOffset.pointee.x / cltStories.frame.size.width
+        let indexPath = IndexPath(item: Int(index), section: 0)
+        cltCategories.selectItem(at: indexPath, animated: true, scrollPosition: .left)
+        
         if preIndexPathSelected == nil {
             preIndexPathSelected = indexPath
         } else {
-            if let cell = cltCategories.cellForItem(at: preIndexPathSelected) as? CategoryStoryCell {
-                cell.backgroundColor = .clear
-                cell.alpha = 1
+            if let cell = cltCategories.cellForItem(at: preIndexPathSelected) as? CategoryCell {
+                cell.setupViewNormal()
             }
         }
         
-        if let cell = cltCategories.cellForItem(at: indexPath) as? CategoryStoryCell {
-            cell.backgroundColor = .lightGray
-            cell.alpha = 0.5
+        if let cell = cltCategories.cellForItem(at: indexPath) as? CategoryCell {
+            cell.setupViewSelect()
             preIndexPathSelected = indexPath
         }
     }

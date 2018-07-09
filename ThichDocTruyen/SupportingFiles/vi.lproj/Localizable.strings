@@ -17,5 +17,6 @@
 "KindOf"       = "Thể loại";
 "Content"      = "⚪ Nội dung";
 "Chapter"      = "Tập";
-"SortNewest"       = "Sắp xếp mới nhất ⏬";
-"SortOldest"       = "Sắp xếp cũ nhất ⏫";
+"SortNewest"   = "Sắp xếp mới nhất ⏬";
+"SortOldest"   = "Sắp xếp cũ nhất ⏫";
+"Ranking"      = "Bảng xếp hạng";

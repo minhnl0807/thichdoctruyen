@@ -15,4 +15,5 @@ struct ViewControllers {
     static let DETAIL_CHAPTER_VIEW_CONTROLLER = "DetailChapterViewController"
     static let MORE_STORIES_VIEW_CONTROLLER   = "MoreStoriesViewController"
     static let CATEGORIES_VIEW_CONTROLLER     = "CategoriesViewController"
+    static let RANKING_STORY_VIEW_CONTROLLER  = "RankingStoryViewController"
 }

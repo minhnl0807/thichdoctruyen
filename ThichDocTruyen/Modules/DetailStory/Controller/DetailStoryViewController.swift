@@ -104,7 +104,7 @@ class DetailStoryViewController: BaseViewController {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
         imageView.frame = self.view.frame
-        imageView.image = #imageLiteral(resourceName: "bg_detail")
+        imageView.image = #imageLiteral(resourceName: "bg_left")
         imageView.clipsToBounds = true
         self.view.addSubview(imageView)
         

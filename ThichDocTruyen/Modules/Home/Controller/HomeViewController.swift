@@ -48,6 +48,10 @@ class HomeViewController: UIViewController {
             let categoriesViewController = CategoriesViewController.init(nibName: ViewControllers.CATEGORIES_VIEW_CONTROLLER, bundle: nil)
             DataManager.shared.navigationController.present(categoriesViewController, animated: false, completion: nil)
         }
+        functionView.closureRankingClick = {
+            let rankingStoryViewController = RankingStoryViewController.init(nibName: ViewControllers.RANKING_STORY_VIEW_CONTROLLER, bundle: nil)
+            DataManager.shared.navigationController.present(rankingStoryViewController, animated: false, completion: nil)
+        }
         headerView.closureMoreClick = {
             self.pushToMoreStoryVC()
         }

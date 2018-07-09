@@ -31,7 +31,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 17 images.
+  /// This `R.image` struct is generated, and contains static references to 22 images.
   struct image {
     /// Image `banner2`.
     static let banner2 = Rswift.ImageResource(bundle: R.hostingBundle, name: "banner2")
@@ -47,6 +47,12 @@ struct R: Rswift.Validatable {
     static let bg_left = Rswift.ImageResource(bundle: R.hostingBundle, name: "bg_left")
     /// Image `bg_main`.
     static let bg_main = Rswift.ImageResource(bundle: R.hostingBundle, name: "bg_main")
+    /// Image `icon_1st`.
+    static let icon_1st = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_1st")
+    /// Image `icon_2nd`.
+    static let icon_2nd = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_2nd")
+    /// Image `icon_3rd`.
+    static let icon_3rd = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_3rd")
     /// Image `icon_back`.
     static let icon_back = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_back")
     /// Image `icon_classify`.
@@ -57,8 +63,12 @@ struct R: Rswift.Validatable {
     static let icon_menu = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_menu")
     /// Image `icon_newest`.
     static let icon_newest = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_newest")
+    /// Image `icon_podium`.
+    static let icon_podium = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_podium")
     /// Image `icon_rank`.
     static let icon_rank = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_rank")
+    /// Image `icon_ribbon`.
+    static let icon_ribbon = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_ribbon")
     /// Image `icon_right_arrow`.
     static let icon_right_arrow = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_right_arrow")
     /// Image `icon_search`.
@@ -103,6 +113,21 @@ struct R: Rswift.Validatable {
       return UIKit.UIImage(resource: R.image.bg_main, compatibleWith: traitCollection)
     }
     
+    /// `UIImage(named: "icon_1st", bundle: ..., traitCollection: ...)`
+    static func icon_1st(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_1st, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "icon_2nd", bundle: ..., traitCollection: ...)`
+    static func icon_2nd(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_2nd, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "icon_3rd", bundle: ..., traitCollection: ...)`
+    static func icon_3rd(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_3rd, compatibleWith: traitCollection)
+    }
+    
     /// `UIImage(named: "icon_back", bundle: ..., traitCollection: ...)`
     static func icon_back(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.icon_back, compatibleWith: traitCollection)
@@ -128,9 +153,19 @@ struct R: Rswift.Validatable {
       return UIKit.UIImage(resource: R.image.icon_newest, compatibleWith: traitCollection)
     }
     
+    /// `UIImage(named: "icon_podium", bundle: ..., traitCollection: ...)`
+    static func icon_podium(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_podium, compatibleWith: traitCollection)
+    }
+    
     /// `UIImage(named: "icon_rank", bundle: ..., traitCollection: ...)`
     static func icon_rank(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.icon_rank, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "icon_ribbon", bundle: ..., traitCollection: ...)`
+    static func icon_ribbon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_ribbon, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "icon_right_arrow", bundle: ..., traitCollection: ...)`
@@ -156,12 +191,14 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 24 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 29 nibs.
   struct nib {
     /// Nib `BaseNavigationView`.
     static let baseNavigationView = _R.nib._BaseNavigationView()
     /// Nib `CategoriesViewController`.
     static let categoriesViewController = _R.nib._CategoriesViewController()
+    /// Nib `CategoryCell`.
+    static let categoryCell = _R.nib._CategoryCell()
     /// Nib `CategoryStoryCell`.
     static let categoryStoryCell = _R.nib._CategoryStoryCell()
     /// Nib `ChapterCell`.
@@ -182,6 +219,8 @@ struct R: Rswift.Validatable {
     static let introStoryView = _R.nib._IntroStoryView()
     /// Nib `LeftMenuViewController`.
     static let leftMenuViewController = _R.nib._LeftMenuViewController()
+    /// Nib `ListStoriesCell`.
+    static let listStoriesCell = _R.nib._ListStoriesCell()
     /// Nib `MainBannerView`.
     static let mainBannerView = _R.nib._MainBannerView()
     /// Nib `MainFunctionView`.
@@ -202,10 +241,16 @@ struct R: Rswift.Validatable {
     static let moreStoriesCell = _R.nib._MoreStoriesCell()
     /// Nib `MoreStoriesViewController`.
     static let moreStoriesViewController = _R.nib._MoreStoriesViewController()
+    /// Nib `RankingCell`.
+    static let rankingCell = _R.nib._RankingCell()
+    /// Nib `RankingStoryViewController`.
+    static let rankingStoryViewController = _R.nib._RankingStoryViewController()
     /// Nib `SplashCell`.
     static let splashCell = _R.nib._SplashCell()
     /// Nib `SplashViewController`.
     static let splashViewController = _R.nib._SplashViewController()
+    /// Nib `TopRankingView`.
+    static let topRankingView = _R.nib._TopRankingView()
     
     /// `UINib(name: "BaseNavigationView", in: bundle)`
     static func baseNavigationView(_: Void = ()) -> UIKit.UINib {
@@ -215,6 +260,11 @@ struct R: Rswift.Validatable {
     /// `UINib(name: "CategoriesViewController", in: bundle)`
     static func categoriesViewController(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.categoriesViewController)
+    }
+    
+    /// `UINib(name: "CategoryCell", in: bundle)`
+    static func categoryCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.categoryCell)
     }
     
     /// `UINib(name: "CategoryStoryCell", in: bundle)`
@@ -267,6 +317,11 @@ struct R: Rswift.Validatable {
       return UIKit.UINib(resource: R.nib.leftMenuViewController)
     }
     
+    /// `UINib(name: "ListStoriesCell", in: bundle)`
+    static func listStoriesCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.listStoriesCell)
+    }
+    
     /// `UINib(name: "MainBannerView", in: bundle)`
     static func mainBannerView(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.mainBannerView)
@@ -317,6 +372,16 @@ struct R: Rswift.Validatable {
       return UIKit.UINib(resource: R.nib.moreStoriesViewController)
     }
     
+    /// `UINib(name: "RankingCell", in: bundle)`
+    static func rankingCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.rankingCell)
+    }
+    
+    /// `UINib(name: "RankingStoryViewController", in: bundle)`
+    static func rankingStoryViewController(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.rankingStoryViewController)
+    }
+    
     /// `UINib(name: "SplashCell", in: bundle)`
     static func splashCell(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.splashCell)
@@ -325,6 +390,11 @@ struct R: Rswift.Validatable {
     /// `UINib(name: "SplashViewController", in: bundle)`
     static func splashViewController(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.splashViewController)
+    }
+    
+    /// `UINib(name: "TopRankingView", in: bundle)`
+    static func topRankingView(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.topRankingView)
     }
     
     fileprivate init() {}
@@ -355,7 +425,7 @@ struct R: Rswift.Validatable {
   
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 13 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 14 localization keys.
     struct localizable {
       /// en translation: Author: 
       /// 
@@ -385,6 +455,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en, vi
       static let newestUpdate = Rswift.StringResource(key: "NewestUpdate", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "vi"], comment: nil)
+      /// en translation: Ranking
+      /// 
+      /// Locales: en, vi
+      static let ranking = Rswift.StringResource(key: "Ranking", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "vi"], comment: nil)
       /// en translation: Sort by newest ⏬
       /// 
       /// Locales: en, vi
@@ -459,6 +533,13 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("NewestUpdate", bundle: R.hostingBundle, comment: "")
       }
       
+      /// en translation: Ranking
+      /// 
+      /// Locales: en, vi
+      static func ranking(_: Void = ()) -> String {
+        return NSLocalizedString("Ranking", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// en translation: Sort by newest ⏬
       /// 
       /// Locales: en, vi
@@ -527,11 +608,13 @@ struct _R: Rswift.Validatable {
   
   struct nib: Rswift.Validatable {
     static func validate() throws {
-      try _ChapterCell.validate()
+      try _RankingCell.validate()
       try _BaseNavigationView.validate()
       try _MainNavigationView.validate()
-      try _MainViewController.validate()
       try _MainFunctionView.validate()
+      try _ChapterCell.validate()
+      try _TopRankingView.validate()
+      try _MainViewController.validate()
       try _MainHeaderView.validate()
     }
     
@@ -556,6 +639,17 @@ struct _R: Rswift.Validatable {
       
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> UIKit.UIView? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _CategoryCell: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "CategoryCell"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> CategoryCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? CategoryCell
       }
       
       fileprivate init() {}
@@ -670,6 +764,17 @@ struct _R: Rswift.Validatable {
       
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> UIKit.UIView? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _ListStoriesCell: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "ListStoriesCell"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> ListStoriesCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? ListStoriesCell
       }
       
       fileprivate init() {}
@@ -804,6 +909,32 @@ struct _R: Rswift.Validatable {
       fileprivate init() {}
     }
     
+    struct _RankingCell: Rswift.NibResourceType, Rswift.Validatable {
+      let bundle = R.hostingBundle
+      let name = "RankingCell"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> RankingCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? RankingCell
+      }
+      
+      static func validate() throws {
+        if UIKit.UIImage(named: "icon_ribbon", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_ribbon' is used in nib 'RankingCell', but couldn't be loaded.") }
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _RankingStoryViewController: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "RankingStoryViewController"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> UIKit.UIView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+      }
+      
+      fileprivate init() {}
+    }
+    
     struct _SplashCell: Rswift.NibResourceType {
       let bundle = R.hostingBundle
       let name = "SplashCell"
@@ -821,6 +952,23 @@ struct _R: Rswift.Validatable {
       
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> UIKit.UIView? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _TopRankingView: Rswift.NibResourceType, Rswift.Validatable {
+      let bundle = R.hostingBundle
+      let name = "TopRankingView"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> TopRankingView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? TopRankingView
+      }
+      
+      static func validate() throws {
+        if UIKit.UIImage(named: "icon_1st", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_1st' is used in nib 'TopRankingView', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icon_2nd", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_2nd' is used in nib 'TopRankingView', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icon_3rd", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_3rd' is used in nib 'TopRankingView', but couldn't be loaded.") }
       }
       
       fileprivate init() {}

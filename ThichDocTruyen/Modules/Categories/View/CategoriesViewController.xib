@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CategoriesViewController" customModule="ThichDocTruyen" customModuleProvider="target">
             <connections>
                 <outlet property="cltCategories" destination="pw0-J2-BoN" id="ni7-zz-Smw"/>
+                <outlet property="cltStories" destination="gnQ-1w-etL" id="d1d-vh-O3Y"/>
                 <outlet property="navigationView" destination="XLd-Ac-vZ9" id="MbN-wn-U9Q"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -61,15 +62,28 @@
                                 <constraint firstAttribute="height" constant="8" id="mDb-4P-gIy"/>
                             </constraints>
                         </view>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="gnQ-1w-etL">
+                            <rect key="frame" x="0.0" y="52" width="375" height="551"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="M0i-hX-X5M">
+                                <size key="itemSize" width="50" height="50"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                        </collectionView>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="ALD-kr-26Y" firstAttribute="leading" secondItem="aXp-AU-fey" secondAttribute="leading" id="840-xC-cRd"/>
+                        <constraint firstItem="gnQ-1w-etL" firstAttribute="leading" secondItem="aXp-AU-fey" secondAttribute="leading" id="ClG-Y5-bWU"/>
                         <constraint firstItem="uLe-U5-SP0" firstAttribute="top" secondItem="ALD-kr-26Y" secondAttribute="bottom" id="Emm-eC-lvh"/>
                         <constraint firstAttribute="trailing" secondItem="uLe-U5-SP0" secondAttribute="trailing" id="L6k-sz-0ea"/>
                         <constraint firstItem="uLe-U5-SP0" firstAttribute="leading" secondItem="aXp-AU-fey" secondAttribute="leading" id="P8P-dh-vD1"/>
                         <constraint firstItem="ALD-kr-26Y" firstAttribute="top" secondItem="aXp-AU-fey" secondAttribute="top" id="RDT-Sx-c82"/>
+                        <constraint firstItem="gnQ-1w-etL" firstAttribute="top" secondItem="uLe-U5-SP0" secondAttribute="bottom" id="bBT-ki-9qG"/>
+                        <constraint firstAttribute="trailing" secondItem="gnQ-1w-etL" secondAttribute="trailing" id="iDn-gN-2za"/>
                         <constraint firstAttribute="trailing" secondItem="ALD-kr-26Y" secondAttribute="trailing" id="r1F-S7-v1O"/>
+                        <constraint firstAttribute="bottom" secondItem="gnQ-1w-etL" secondAttribute="bottom" id="utZ-Uv-zbn"/>
                     </constraints>
                 </view>
             </subviews>
