@@ -16,8 +16,8 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="58"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="9fJ-L0-ud5">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="58"/>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="9fJ-L0-ud5">
+                    <rect key="frame" x="5" y="5" width="365" height="48"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="R6f-tS-r6Z">
                         <size key="itemSize" width="50" height="50"/>
@@ -30,14 +30,13 @@
                     <rect key="frame" x="168" y="21" width="39" height="37"/>
                 </pageControl>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="ueQ-ZL-vxd" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="O8p-7W-GW3"/>
-                <constraint firstAttribute="bottom" secondItem="9fJ-L0-ud5" secondAttribute="bottom" id="Oy8-FM-0Ev"/>
-                <constraint firstItem="9fJ-L0-ud5" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="TrV-c2-f5J"/>
+                <constraint firstAttribute="bottom" secondItem="9fJ-L0-ud5" secondAttribute="bottom" constant="5" id="Oy8-FM-0Ev"/>
+                <constraint firstItem="9fJ-L0-ud5" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="TrV-c2-f5J"/>
                 <constraint firstItem="ueQ-ZL-vxd" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="byo-xg-F2H"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="9fJ-L0-ud5" secondAttribute="trailing" id="clQ-8V-Rcc"/>
-                <constraint firstItem="9fJ-L0-ud5" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="gkn-H8-Ump"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="9fJ-L0-ud5" secondAttribute="trailing" constant="5" id="clQ-8V-Rcc"/>
+                <constraint firstItem="9fJ-L0-ud5" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="5" id="gkn-H8-Ump"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

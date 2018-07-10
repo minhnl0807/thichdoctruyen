@@ -27,6 +27,9 @@
                                 <constraint firstAttribute="width" secondItem="sQz-cC-6Ey" secondAttribute="height" multiplier="376:210" id="0Jf-Cv-1nA"/>
                             </constraints>
                             <state key="normal" image="icon_classify"/>
+                            <connections>
+                                <action selector="categoriesClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="baB-ER-m0P"/>
+                            </connections>
                         </button>
                     </subviews>
                     <constraints>
@@ -61,6 +64,9 @@
                                 <constraint firstAttribute="width" secondItem="N9i-0O-e4l" secondAttribute="height" multiplier="376:210" id="VJL-E6-YX4"/>
                             </constraints>
                             <state key="normal" image="icon_rank"/>
+                            <connections>
+                                <action selector="rankingClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="ejy-jC-E0k"/>
+                            </connections>
                         </button>
                     </subviews>
                     <constraints>

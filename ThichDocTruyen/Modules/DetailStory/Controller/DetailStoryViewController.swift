@@ -42,13 +42,12 @@ class DetailStoryViewController: BaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         UtilAnimates.shared.animateAppearViewController(viewController: self) {
-            self.imageView.removeFromSuperview()
+            //self.imageView.removeFromSuperview()
         }
     }
     
@@ -70,7 +69,7 @@ class DetailStoryViewController: BaseViewController {
         tbStory.delaysContentTouches = false
         
         headerStory = Bundle.main.loadNibNamed(Views.HEADER_STORY, owner: self, options: nil)?.first as! HeaderStoryView
-        headerStory.setupView(imageView: self.imageView, story: self.story)
+        headerStory.setupView(imageView: self.imageView, story: self.story, urlImage: story.url!)
         
         introStory = Bundle.main.loadNibNamed(Views.INTRO_STORY, owner: self, options: nil)?.first as! IntroStoryView
         introStory.closureMoreClick = {
@@ -91,6 +90,11 @@ class DetailStoryViewController: BaseViewController {
         }
         chapterStory.setupView()
         
+        if imageView == nil {
+            imageView = UIImageView()
+            imageView.frame.size = DataManager.shared.baseSizeStoryImage
+        }
+        
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         imageView.frame.origin = CGPoint(x: 8, y: 72)
@@ -100,7 +104,7 @@ class DetailStoryViewController: BaseViewController {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
         imageView.frame = self.view.frame
-        imageView.image = #imageLiteral(resourceName: "bg_detail")
+        imageView.image = #imageLiteral(resourceName: "bg_left")
         imageView.clipsToBounds = true
         self.view.addSubview(imageView)
         

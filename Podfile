@@ -9,4 +9,6 @@ target 'ThichDocTruyen' do
   pod 'SideMenu'
   pod 'Alamofire'
   pod 'AlamofireImage'
+  pod 'ARSLineProgress', '~> 2.0'
+  pod 'Kingfisher', '~> 4.0'
 end

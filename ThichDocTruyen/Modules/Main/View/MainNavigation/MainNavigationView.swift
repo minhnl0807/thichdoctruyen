@@ -18,7 +18,7 @@ class MainNavigationView: UIView {
     
     func setupView() {
         Utils.shared.setConerRadiusForView(view: searchView, num: 15)
-        Utils.shared.setTextForView(view: lblSearch, title: R.string.localizable.enterKeyWord(), font: Fonts.FONT13_SF, color: Color.GRAY_TEXT)
+        Utils.shared.setTextForView(view: lblSearch, title: R.string.localizable.enterKeyWord(), font: Fonts.FONT13_SF, color: Colors.GRAY_TEXT)
         self.backgroundColor = .clear
     }
     

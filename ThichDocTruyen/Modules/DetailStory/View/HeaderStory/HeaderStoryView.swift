@@ -22,11 +22,19 @@ class HeaderStoryView: UIView {
     @IBOutlet weak var lblKindOf: UILabel!
     var story: StoryModel!
     
-    func setupView(imageView: UIImageView, story: StoryModel) {
+    func setupView(imageView: UIImageView?, story: StoryModel, urlImage: String) {
         self.story = story
-        imgStory.image = imageView.image
-        widthOfImgStory.constant = imageView.frame.size.width
-        heightOfImgStory.constant = imageView.frame.size.height
+        
+        if imageView != nil {
+            imgStory.image = imageView?.image
+            widthOfImgStory.constant = (imageView?.frame.size.width)!
+            heightOfImgStory.constant = (imageView?.frame.size.height)!
+        } else {
+            Utils.shared.imageViewLoadImage(imgView: imgStory, linkImage: urlImage)
+            widthOfImgStory.constant = DataManager.shared.baseSizeStoryImage.width
+            heightOfImgStory.constant = DataManager.shared.baseSizeStoryImage.height
+        }
+        
         Utils.shared.setBorderColorForView(view: imgStory, borderWidth: 1, color: .white)
         
         Utils.shared.setTextForView(view: lblStoryName, title: story.name, font: Fonts.FONT16_SF_BOLD, color: .white)
@@ -43,7 +51,6 @@ class HeaderStoryView: UIView {
         cltCategory.register(UINib(nibName: Cells.CATEGORY_STORY, bundle: nil), forCellWithReuseIdentifier: Cells.CATEGORY_STORY)
         cltCategory.backgroundColor = .clear
     }
-
 }
 
 extension HeaderStoryView: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {

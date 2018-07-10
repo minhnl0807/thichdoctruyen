@@ -17,6 +17,7 @@ struct Views {
     static let MAIN_BANNER     = "MainBannerView"
     static let INTRO_STORY     = "IntroStoryView"
     static let CHAPTER_STORY   = "ChapterStoryView"
+    static let TOP_RANKING     = "TopRankingView"
 }
 
 struct Cells {
@@ -25,4 +26,8 @@ struct Cells {
     static let SPLASH              = "SplashCell"
     static let CHAPTER_CELL        = "ChapterCell"
     static let DETAIL_CHAPTER_CELL = "DetailChapterCell"
+    static let MORE_STORIES_CELL   = "MoreStoriesCell"
+    static let CATEGORY            = "CategoryCell"
+    static let LIST_STORIES_CELL   = "ListStoriesCell"
+    static let RANKING_CELL        = "RankingCell"
 }

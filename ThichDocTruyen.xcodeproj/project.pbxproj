@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C1F6AFD20F34200001C8D6E /* RankingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1F6AFB20F34200001C8D6E /* RankingCell.swift */; };
+		7C1F6AFE20F34200001C8D6E /* RankingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C1F6AFC20F34200001C8D6E /* RankingCell.xib */; };
 		7C7D299520E47D740078526C /* ChapterStoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7D299420E47D740078526C /* ChapterStoryView.swift */; };
 		7C7D299720E47D820078526C /* ChapterStoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C7D299620E47D820078526C /* ChapterStoryView.xib */; };
 		7C7D299B20E480C10078526C /* ChapterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7D299920E480C10078526C /* ChapterCell.swift */; };
@@ -70,12 +72,28 @@
 		7CC7143F20E31FD80083A0FE /* IntroStoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CC7143E20E31FD80083A0FE /* IntroStoryView.xib */; };
 		7CC7144220E320090083A0FE /* StoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC7144120E320090083A0FE /* StoryModel.swift */; };
 		7CC7144620E34A500083A0FE /* Params.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC7144520E34A500083A0FE /* Params.swift */; };
+		7CCF433120EDF8BE004D01FF /* MoreStoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCF432F20EDF8BE004D01FF /* MoreStoriesViewController.swift */; };
+		7CCF433220EDF8BE004D01FF /* MoreStoriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CCF433020EDF8BE004D01FF /* MoreStoriesViewController.xib */; };
+		7CCF433620EDFC8E004D01FF /* MoreStoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCF433420EDFC8E004D01FF /* MoreStoriesCell.swift */; };
+		7CCF433720EDFC8E004D01FF /* MoreStoriesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CCF433520EDFC8E004D01FF /* MoreStoriesCell.xib */; };
+		7CCF433D20EE12A6004D01FF /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCF433B20EE12A6004D01FF /* CategoriesViewController.swift */; };
+		7CCF433E20EE12A6004D01FF /* CategoriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CCF433C20EE12A6004D01FF /* CategoriesViewController.xib */; };
+		7CCF434120EF0AE1004D01FF /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCF433F20EF0AE1004D01FF /* CategoryCell.swift */; };
+		7CCF434220EF0AE1004D01FF /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CCF434020EF0AE1004D01FF /* CategoryCell.xib */; };
+		7CCF434720EF1696004D01FF /* ListStoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCF434520EF1696004D01FF /* ListStoriesCell.swift */; };
+		7CCF434820EF1696004D01FF /* ListStoriesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CCF434620EF1696004D01FF /* ListStoriesCell.xib */; };
+		7CCF434C20EF2ABE004D01FF /* RankingStoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCF434A20EF2ABE004D01FF /* RankingStoryViewController.swift */; };
+		7CCF434D20EF2ABE004D01FF /* RankingStoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CCF434B20EF2ABE004D01FF /* RankingStoryViewController.xib */; };
+		7CCF435220EF4676004D01FF /* TopRankingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCF435120EF4676004D01FF /* TopRankingView.swift */; };
+		7CCF435420EF467D004D01FF /* TopRankingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CCF435320EF467D004D01FF /* TopRankingView.xib */; };
 		99ED3951C7E3DCF228C8DC27 /* Pods_ThichDocTruyen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B654C9F6DE9A8DD9A82EB425 /* Pods_ThichDocTruyen.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		015E807518D6479A33A21815 /* Pods-ThichDocTruyen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThichDocTruyen.release.xcconfig"; path = "Pods/Target Support Files/Pods-ThichDocTruyen/Pods-ThichDocTruyen.release.xcconfig"; sourceTree = "<group>"; };
 		4573DF78D9FE8A584AB480FE /* Pods-ThichDocTruyen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThichDocTruyen.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ThichDocTruyen/Pods-ThichDocTruyen.debug.xcconfig"; sourceTree = "<group>"; };
+		7C1F6AFB20F34200001C8D6E /* RankingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingCell.swift; sourceTree = "<group>"; };
+		7C1F6AFC20F34200001C8D6E /* RankingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RankingCell.xib; sourceTree = "<group>"; };
 		7C7D299420E47D740078526C /* ChapterStoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterStoryView.swift; sourceTree = "<group>"; };
 		7C7D299620E47D820078526C /* ChapterStoryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChapterStoryView.xib; sourceTree = "<group>"; };
 		7C7D299920E480C10078526C /* ChapterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterCell.swift; sourceTree = "<group>"; };
@@ -142,6 +160,20 @@
 		7CC7143E20E31FD80083A0FE /* IntroStoryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IntroStoryView.xib; sourceTree = "<group>"; };
 		7CC7144120E320090083A0FE /* StoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryModel.swift; sourceTree = "<group>"; };
 		7CC7144520E34A500083A0FE /* Params.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Params.swift; sourceTree = "<group>"; };
+		7CCF432F20EDF8BE004D01FF /* MoreStoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreStoriesViewController.swift; sourceTree = "<group>"; };
+		7CCF433020EDF8BE004D01FF /* MoreStoriesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreStoriesViewController.xib; sourceTree = "<group>"; };
+		7CCF433420EDFC8E004D01FF /* MoreStoriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreStoriesCell.swift; sourceTree = "<group>"; };
+		7CCF433520EDFC8E004D01FF /* MoreStoriesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreStoriesCell.xib; sourceTree = "<group>"; };
+		7CCF433B20EE12A6004D01FF /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
+		7CCF433C20EE12A6004D01FF /* CategoriesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesViewController.xib; sourceTree = "<group>"; };
+		7CCF433F20EF0AE1004D01FF /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		7CCF434020EF0AE1004D01FF /* CategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
+		7CCF434520EF1696004D01FF /* ListStoriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListStoriesCell.swift; sourceTree = "<group>"; };
+		7CCF434620EF1696004D01FF /* ListStoriesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListStoriesCell.xib; sourceTree = "<group>"; };
+		7CCF434A20EF2ABE004D01FF /* RankingStoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingStoryViewController.swift; sourceTree = "<group>"; };
+		7CCF434B20EF2ABE004D01FF /* RankingStoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RankingStoryViewController.xib; sourceTree = "<group>"; };
+		7CCF435120EF4676004D01FF /* TopRankingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRankingView.swift; sourceTree = "<group>"; };
+		7CCF435320EF467D004D01FF /* TopRankingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopRankingView.xib; sourceTree = "<group>"; };
 		B654C9F6DE9A8DD9A82EB425 /* Pods_ThichDocTruyen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThichDocTruyen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -157,6 +189,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7C1F6AFA20F341D4001C8D6E /* RankingCell */ = {
+			isa = PBXGroup;
+			children = (
+				7C1F6AFB20F34200001C8D6E /* RankingCell.swift */,
+				7C1F6AFC20F34200001C8D6E /* RankingCell.xib */,
+			);
+			path = RankingCell;
+			sourceTree = "<group>";
+		};
 		7C7D299320E47C360078526C /* ChapterStory */ = {
 			isa = PBXGroup;
 			children = (
@@ -362,6 +403,9 @@
 		7CA7216220DA14E5006531B3 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				7CCF434920EF2A97004D01FF /* RankingStory */,
+				7CCF433820EE11F4004D01FF /* Categories */,
+				7CCF432C20EDF885004D01FF /* MoreStory */,
 				7C7D29A420E5C2690078526C /* DetailChapter */,
 				7CC7141E20E21AA80083A0FE /* Home */,
 				7C960AE420DDDFB900683929 /* DetailStory */,
@@ -614,6 +658,122 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		7CCF432C20EDF885004D01FF /* MoreStory */ = {
+			isa = PBXGroup;
+			children = (
+				7CCF432E20EDF8A4004D01FF /* Controller */,
+				7CCF432D20EDF89E004D01FF /* View */,
+			);
+			path = MoreStory;
+			sourceTree = "<group>";
+		};
+		7CCF432D20EDF89E004D01FF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7CCF433320EDFC64004D01FF /* MoreStoriesCell */,
+				7CCF433020EDF8BE004D01FF /* MoreStoriesViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7CCF432E20EDF8A4004D01FF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7CCF432F20EDF8BE004D01FF /* MoreStoriesViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7CCF433320EDFC64004D01FF /* MoreStoriesCell */ = {
+			isa = PBXGroup;
+			children = (
+				7CCF433420EDFC8E004D01FF /* MoreStoriesCell.swift */,
+				7CCF433520EDFC8E004D01FF /* MoreStoriesCell.xib */,
+			);
+			path = MoreStoriesCell;
+			sourceTree = "<group>";
+		};
+		7CCF433820EE11F4004D01FF /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				7CCF433A20EE128E004D01FF /* Controller */,
+				7CCF433920EE1288004D01FF /* View */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		7CCF433920EE1288004D01FF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7CCF434420EF1670004D01FF /* ListStoriesCell */,
+				7CCF434320EF0AE5004D01FF /* CategoryCell */,
+				7CCF433C20EE12A6004D01FF /* CategoriesViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7CCF433A20EE128E004D01FF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7CCF433B20EE12A6004D01FF /* CategoriesViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7CCF434320EF0AE5004D01FF /* CategoryCell */ = {
+			isa = PBXGroup;
+			children = (
+				7CCF433F20EF0AE1004D01FF /* CategoryCell.swift */,
+				7CCF434020EF0AE1004D01FF /* CategoryCell.xib */,
+			);
+			path = CategoryCell;
+			sourceTree = "<group>";
+		};
+		7CCF434420EF1670004D01FF /* ListStoriesCell */ = {
+			isa = PBXGroup;
+			children = (
+				7CCF434520EF1696004D01FF /* ListStoriesCell.swift */,
+				7CCF434620EF1696004D01FF /* ListStoriesCell.xib */,
+			);
+			path = ListStoriesCell;
+			sourceTree = "<group>";
+		};
+		7CCF434920EF2A97004D01FF /* RankingStory */ = {
+			isa = PBXGroup;
+			children = (
+				7CCF434F20EF2AD8004D01FF /* View */,
+				7CCF434E20EF2AC3004D01FF /* Controller */,
+			);
+			path = RankingStory;
+			sourceTree = "<group>";
+		};
+		7CCF434E20EF2AC3004D01FF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7CCF434A20EF2ABE004D01FF /* RankingStoryViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7CCF434F20EF2AD8004D01FF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7C1F6AFA20F341D4001C8D6E /* RankingCell */,
+				7CCF435020EF4641004D01FF /* TopRanking */,
+				7CCF434B20EF2ABE004D01FF /* RankingStoryViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7CCF435020EF4641004D01FF /* TopRanking */ = {
+			isa = PBXGroup;
+			children = (
+				7CCF435120EF4676004D01FF /* TopRankingView.swift */,
+				7CCF435320EF467D004D01FF /* TopRankingView.xib */,
+			);
+			path = TopRanking;
+			sourceTree = "<group>";
+		};
 		8D4DE59890D49D9D0155852D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -693,12 +853,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CCF433720EDFC8E004D01FF /* MoreStoriesCell.xib in Resources */,
 				7CA7215720DA1290006531B3 /* LaunchScreen.storyboard in Resources */,
+				7CCF434820EF1696004D01FF /* ListStoriesCell.xib in Resources */,
+				7CCF433E20EE12A6004D01FF /* CategoriesViewController.xib in Resources */,
+				7CCF435420EF467D004D01FF /* TopRankingView.xib in Resources */,
 				7C960AEC20DDE04200683929 /* DetailStoryViewController.xib in Resources */,
 				7CC7143420E22BF80083A0FE /* SplashCell.xib in Resources */,
 				7CC7141D20E2151D0083A0FE /* MainTabbarView.xib in Resources */,
 				7CC7140F20E1CEE10083A0FE /* HeaderStoryView.xib in Resources */,
 				7CA7219E20DA4898006531B3 /* MainStoryView.xib in Resources */,
+				7C1F6AFE20F34200001C8D6E /* RankingCell.xib in Resources */,
 				7CA7219720DA3D7D006531B3 /* MainFunctionView.xib in Resources */,
 				7C960AD920DB4A6000683929 /* MainStoryCell.xib in Resources */,
 				7CA7217120DA292F006531B3 /* MainViewController.xib in Resources */,
@@ -706,6 +871,8 @@
 				7C7D299720E47D820078526C /* ChapterStoryView.xib in Resources */,
 				7CC7141820E1F0E70083A0FE /* CategoryStoryCell.xib in Resources */,
 				7CA7215420DA1290006531B3 /* Assets.xcassets in Resources */,
+				7CCF434220EF0AE1004D01FF /* CategoryCell.xib in Resources */,
+				7CCF433220EDF8BE004D01FF /* MoreStoriesViewController.xib in Resources */,
 				7CA721AF20DA4E10006531B3 /* Localizable.strings in Resources */,
 				7CA7219020DA36F6006531B3 /* MainNavigationView.xib in Resources */,
 				7C960AE320DBAC5B00683929 /* LeftMenuViewController.xib in Resources */,
@@ -715,6 +882,7 @@
 				7CA721A320DA49DC006531B3 /* MainHeaderView.xib in Resources */,
 				7CC7142420E21AD80083A0FE /* HomeViewController.xib in Resources */,
 				7C7D29B320E5C54E0078526C /* DetailChapterCell.xib in Resources */,
+				7CCF434D20EF2ABE004D01FF /* RankingStoryViewController.xib in Resources */,
 				7CC7143F20E31FD80083A0FE /* IntroStoryView.xib in Resources */,
 				7C7D299C20E480C10078526C /* ChapterCell.xib in Resources */,
 			);
@@ -761,8 +929,10 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ThichDocTruyen/Pods-ThichDocTruyen-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ARSLineProgress/ARSLineProgress.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
@@ -770,8 +940,10 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ARSLineProgress.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
@@ -792,15 +964,20 @@
 				7CA7218E20DA36ED006531B3 /* MainNavigationView.swift in Sources */,
 				7CA7219C20DA488F006531B3 /* MainStoryView.swift in Sources */,
 				7CC7142B20E2288E0083A0FE /* UserDefaultHelper.swift in Sources */,
+				7CCF433620EDFC8E004D01FF /* MoreStoriesCell.swift in Sources */,
 				7CA7219220DA380B006531B3 /* Colors.swift in Sources */,
+				7CCF434720EF1696004D01FF /* ListStoriesCell.swift in Sources */,
 				7C7D299520E47D740078526C /* ChapterStoryView.swift in Sources */,
 				7C7D29A320E4E14B0078526C /* ApiClient.swift in Sources */,
+				7CCF434C20EF2ABE004D01FF /* RankingStoryViewController.swift in Sources */,
 				7CC7142820E227B50083A0FE /* SplashViewController.swift in Sources */,
 				7CA7214F20DA128F006531B3 /* MainViewController.swift in Sources */,
 				7CA7216A20DA156D006531B3 /* DataManager.swift in Sources */,
 				7CC7143820E238900083A0FE /* MainBannerView.swift in Sources */,
 				7CC7141B20E215140083A0FE /* MainTabbarView.swift in Sources */,
+				7CCF433120EDF8BE004D01FF /* MoreStoriesViewController.swift in Sources */,
 				7CA7219520DA3D6D006531B3 /* MainFunctionView.swift in Sources */,
+				7C1F6AFD20F34200001C8D6E /* RankingCell.swift in Sources */,
 				7CC7141720E1F0E70083A0FE /* CategoryStoryCell.swift in Sources */,
 				7C960AF420DDF3F100683929 /* BaseNavigationView.swift in Sources */,
 				7C960ADC20DB7E0E00683929 /* UtilAnimates.swift in Sources */,
@@ -810,9 +987,12 @@
 				7CA7218920DA345E006531B3 /* Constants.swift in Sources */,
 				7CA7214D20DA128F006531B3 /* AppDelegate.swift in Sources */,
 				7CA721A120DA49D4006531B3 /* MainHeaderView.swift in Sources */,
+				7CCF435220EF4676004D01FF /* TopRankingView.swift in Sources */,
 				7CC7142E20E22B070083A0FE /* AppTimer.swift in Sources */,
 				7CC7144220E320090083A0FE /* StoryModel.swift in Sources */,
 				7CA721B520DA4F7B006531B3 /* R.generated.swift in Sources */,
+				7CCF433D20EE12A6004D01FF /* CategoriesViewController.swift in Sources */,
+				7CCF434120EF0AE1004D01FF /* CategoryCell.swift in Sources */,
 				7CA7217A20DA2F95006531B3 /* BaseViewController.swift in Sources */,
 				7C960AE120DBAC5200683929 /* LeftMenuViewController.swift in Sources */,
 				7CC7143D20E31FCF0083A0FE /* IntroStoryView.swift in Sources */,

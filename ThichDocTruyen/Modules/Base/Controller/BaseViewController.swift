@@ -48,6 +48,7 @@ class BaseViewController: UIViewController {
             Utils.shared.setTextForView(view: baseNavigation.lblTitle, title: navigationBarTitle(), font: Fonts.FONT16_SF, color: .black)
             baseNavigation.lblTitle.sizeToFit()
             baseNavigation.setupView()
+            baseNavigation.dropShadow()
             self.navigationBarView()?.addSubview(self.baseNavigation)
         }
     }

@@ -10,8 +10,18 @@ import UIKit
 
 class MainFunctionView: UIView {
 
+    var closureCategoriesClick: (() -> ())!
+    var closureRankingClick: (() -> ())!
+    
     func setupView() {
         self.backgroundColor = .clear
     }
 
+    @IBAction func categoriesClick(_ sender: Any) {
+        closureCategoriesClick()
+    }
+    
+    @IBAction func rankingClick(_ sender: Any) {
+        closureRankingClick()
+    }
 }

@@ -17,5 +17,6 @@
 "KindOf"       = "Kind of";
 "Content"      = "⚪ Content";
 "Chapter"      = "Chapter";
-"SortNewest"       = "Sort by newest ⏬";
-"SortOldest"       = "Sort by oldest ⏫";
+"SortNewest"   = "Sort by newest ⏬";
+"SortOldest"   = "Sort by oldest ⏫";
+"Ranking"      = "Ranking";
