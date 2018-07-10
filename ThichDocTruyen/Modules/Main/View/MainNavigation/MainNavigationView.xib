@@ -61,6 +61,10 @@
                         <action selector="showMenuClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="8Li-JF-82w"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o8e-lC-DtX">
+                    <rect key="frame" x="334" y="9.5" width="25" height="25"/>
+                    <state key="normal" image="icon_setting"/>
+                </button>
             </subviews>
             <constraints>
                 <constraint firstItem="Hs8-vx-P3a" firstAttribute="leading" secondItem="ICj-uo-WiR" secondAttribute="leading" id="74p-3V-VUZ"/>
@@ -68,10 +72,14 @@
                 <constraint firstItem="Hs8-vx-P3a" firstAttribute="bottom" secondItem="ICj-uo-WiR" secondAttribute="bottom" id="C80-Pc-c7e"/>
                 <constraint firstItem="Hs8-vx-P3a" firstAttribute="top" secondItem="ICj-uo-WiR" secondAttribute="top" id="EeI-fn-Sid"/>
                 <constraint firstItem="W0O-VS-6uq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="L6B-FL-Eqy"/>
+                <constraint firstItem="o8e-lC-DtX" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" constant="-16" id="NvV-ai-Txr"/>
                 <constraint firstItem="Hs8-vx-P3a" firstAttribute="trailing" secondItem="ICj-uo-WiR" secondAttribute="trailing" id="PA9-vv-Qir"/>
                 <constraint firstItem="ICj-uo-WiR" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="UBM-ql-mVM"/>
                 <constraint firstItem="W0O-VS-6uq" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="V4H-sl-jAd"/>
                 <constraint firstItem="ICj-uo-WiR" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="byz-ob-pYK"/>
+                <constraint firstItem="o8e-lC-DtX" firstAttribute="height" secondItem="W0O-VS-6uq" secondAttribute="height" constant="5" id="cjb-l2-5gj"/>
+                <constraint firstItem="o8e-lC-DtX" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="duF-gN-MnC"/>
+                <constraint firstItem="o8e-lC-DtX" firstAttribute="width" secondItem="W0O-VS-6uq" secondAttribute="width" constant="5" id="jaq-Ux-wnk"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
@@ -85,5 +93,6 @@
     <resources>
         <image name="icon_menu" width="50" height="50"/>
         <image name="icon_search" width="50" height="50"/>
+        <image name="icon_setting" width="50" height="50"/>
     </resources>
 </document>

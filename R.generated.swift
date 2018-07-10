@@ -31,7 +31,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 22 images.
+  /// This `R.image` struct is generated, and contains static references to 23 images.
   struct image {
     /// Image `banner2`.
     static let banner2 = Rswift.ImageResource(bundle: R.hostingBundle, name: "banner2")
@@ -73,6 +73,8 @@ struct R: Rswift.Validatable {
     static let icon_right_arrow = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_right_arrow")
     /// Image `icon_search`.
     static let icon_search = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_search")
+    /// Image `icon_setting`.
+    static let icon_setting = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_setting")
     /// Image `splash2`.
     static let splash2 = Rswift.ImageResource(bundle: R.hostingBundle, name: "splash2")
     /// Image `splash`.
@@ -176,6 +178,11 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "icon_search", bundle: ..., traitCollection: ...)`
     static func icon_search(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.icon_search, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "icon_setting", bundle: ..., traitCollection: ...)`
+    static func icon_setting(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_setting, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "splash", bundle: ..., traitCollection: ...)`
@@ -834,6 +841,7 @@ struct _R: Rswift.Validatable {
       static func validate() throws {
         if UIKit.UIImage(named: "icon_search", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_search' is used in nib 'MainNavigationView', but couldn't be loaded.") }
         if UIKit.UIImage(named: "icon_menu", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_menu' is used in nib 'MainNavigationView', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icon_setting", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_setting' is used in nib 'MainNavigationView', but couldn't be loaded.") }
       }
       
       fileprivate init() {}
